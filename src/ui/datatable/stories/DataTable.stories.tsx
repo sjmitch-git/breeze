@@ -7,13 +7,6 @@ const meta: Meta = {
   title: "Data Visualization/Data Table",
   component: DataTable,
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div className="bg-white dark:bg-transparent dark:text-light p-0">
-        <Story />
-      </div>
-    ),
-  ],
   parameters: {
     docs: {
       description: {

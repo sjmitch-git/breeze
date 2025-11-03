@@ -32,7 +32,7 @@ import { Pictogram } from '@smitch/fluid'
   },
   decorators: [
     (Story) => (
-      <div className="dark:text-light bg-white dark:bg-transparent p-4">
+      <div className="max-w-md ">
         <Story />
       </div>
     ),

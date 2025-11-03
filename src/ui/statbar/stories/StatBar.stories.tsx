@@ -48,7 +48,7 @@ import { StatBar } from '@smitch/fluid'
   },
   decorators: [
     (Story) => (
-      <div className="bg-white dark:bg-transparent dark:text-light p-4">
+      <div className="max-w-md mx-auto">
         <Story />
       </div>
     ),
