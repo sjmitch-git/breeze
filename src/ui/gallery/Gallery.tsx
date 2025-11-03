@@ -20,7 +20,7 @@ const Gallery = ({
   return (
     <div
       className={twMerge(
-        `gallery group min-w-full grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-6`,
+        `gallery group min-w-full grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6 bg-slate-800 p-2`,
         className
       )}
       style={style}

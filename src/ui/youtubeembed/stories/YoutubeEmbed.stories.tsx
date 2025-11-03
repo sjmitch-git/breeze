@@ -14,7 +14,7 @@ The **YouTube Embed** component allows users to embed YouTube videos seamlessly 
 ### Key Features:
 - Easily embed YouTube videos via a simple video ID.
 - Control player behavior with parameters like autoplay, loop, and mute.
-- Customizable iframe options such as lazy loading and referrer policy.
+- Customizable iframe options such as lazy loading.
 - Control permissions through the \`allow\` attribute for enhanced security and customization.
 
 ### Import:
@@ -28,7 +28,6 @@ import { YoutubeEmbed } from '@smitch/fluid'
   videoId="Q4cAzEvMsHE"
   playerParams={{ autoplay: 1, controls: 1 }}
   loading="lazy"
-  referrerPolicy="no-referrer"
 />
 \`\`\`
 				`,
@@ -51,11 +50,6 @@ import { YoutubeEmbed } from '@smitch/fluid'
       options: ["eager", "lazy"],
       description: "Loading behavior for the iframe.",
     },
-    referrerPolicy: {
-      control: "select",
-      options: ["no-referrer", "origin", "unsafe-url"],
-      description: "Referrer policy for the iframe.",
-    },
     allow: {
       control: "text",
       description: "Specifies permissions for the iframe.",
@@ -71,7 +65,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    videoId: "Q4cAzEvMsHE",
+    videoId: "dQw4w9WgXcQ",
     title: "YouTube video player",
     playerParams: {
       controls: 1,
@@ -82,7 +76,6 @@ export const Default: Story = {
     allow:
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
     loading: "lazy",
-    referrerPolicy: "no-referrer",
   },
   parameters: {
     docs: {

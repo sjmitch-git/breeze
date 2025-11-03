@@ -1,11 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Gallery } from "..";
 
-import Data from "@/data/dogs.json";
+import Data from "../../../data/dogs.json";
 
 const meta: Meta = {
   title: "Media/Gallery",
   component: Gallery,
+  decorators: [
+    (Story) => (
+      <div className="p-0">
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
       description: {

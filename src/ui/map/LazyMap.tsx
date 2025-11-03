@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import L from "leaflet";
 import { Map as LMap, Layer, LeafletMouseEvent, Control } from "leaflet";
 import { MapContainer, TileLayer, LayersControl, useMap, GeoJSON } from "react-leaflet";
+import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 import "leaflet.fullscreen/Control.FullScreen.css";
 import "leaflet.fullscreen";
 import { tileOptions as defaultTileOptions } from "./tileOptions";

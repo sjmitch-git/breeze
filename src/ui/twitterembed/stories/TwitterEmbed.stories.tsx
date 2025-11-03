@@ -4,6 +4,13 @@ import TwitterEmbed from "../TwitterEmbed";
 const meta: Meta = {
   title: "Media/X Embed",
   component: TwitterEmbed,
+  decorators: [
+    (Story) => (
+      <div className="mx-auto max-w-xl">
+        <Story />
+      </div>
+    ),
+  ],
   tags: ["autodocs"],
   parameters: {
     docs: {
@@ -53,29 +60,24 @@ export const Default: Story = {
       control: { type: "text" },
     },
     lang: {
-      description: "Language code for the embed (e.g., en, es).",
-      control: { type: "text" },
+      table: {
+        disable: true,
+      },
     },
     theme: {
       description: 'Theme for the embed, either "light" or "dark".',
       control: { type: "radio" },
       options: ["light", "dark"],
     },
-    header: {
-      description: "Whether to display the X header in the embed.",
-      control: { type: "boolean" },
+    className: {
+      table: {
+        disable: true,
+      },
     },
-    borders: {
-      description: "Whether to show borders around the embed.",
-      control: { type: "boolean" },
-    },
-    transparent: {
-      description: "Toggle transparency for the background.",
-      control: { type: "boolean" },
-    },
-    scrollbars: {
-      description: "Toggle scrollbars for the embed.",
-      control: { type: "boolean" },
+    style: {
+      table: {
+        disable: true,
+      },
     },
   },
   args: {
@@ -83,10 +85,6 @@ export const Default: Story = {
     status: "1767571829365883097",
     lang: "en",
     theme: "light",
-    header: true,
-    borders: false,
-    transparent: false,
-    scrollbars: false,
   },
   parameters: {
     docs: {

@@ -1,12 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Video } from "..";
 
-const videoSrc = "/video/trailer.mp4";
+const videoSrc = "/bunny-trailer.mp4";
 const videoPoster = "/bunny-poster.png";
 
 const meta: Meta = {
   title: "Media/Video",
   component: Video,
+  decorators: [
+    (Story) => (
+      <div className="max-w-md mx-auto">
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     aspect: {
       description: "The aspect ratio for the video.",
@@ -264,11 +271,6 @@ export const Subtitles: Story = {
         disable: true,
       },
     },
-    aspect: {
-      table: {
-        disable: true,
-      },
-    },
     grayscale: {
       table: {
         disable: true,
@@ -329,6 +331,9 @@ export const Subtitles: Story = {
     src: "./example.mp4",
     tracks: ["./subs.vtt", "./subs_fr.vtt", "./subs_ja.vtt"],
     srcLangs: ["en", "fr", "ja"],
+    aspect: "television",
+    poster: undefined,
+    controlOptions: ["captions"],
   },
 };
 

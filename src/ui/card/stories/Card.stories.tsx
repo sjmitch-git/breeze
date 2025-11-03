@@ -8,7 +8,7 @@ const meta: Meta = {
   component: Card,
   decorators: [
     (Story) => (
-      <div className="max-w-xl p-4">
+      <div className="max-w-lg mx-auto p-4">
         <Story />
       </div>
     ),
@@ -24,7 +24,7 @@ const meta: Meta = {
     layout: "col",
     shadow: "none",
     rounded: "none",
-    outline: false,
+    outline: true,
     className: "",
   },
   tags: ["autodocs"],
@@ -97,6 +97,7 @@ export const NoImage: Story = {
     },
   },
   args: {
+    outline: true,
     children: (
       <>
         <CardBody>

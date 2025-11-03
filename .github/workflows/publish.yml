@@ -6,7 +6,7 @@ on:
       - main
   release:
     types:
-      - created
+      - published
 
 jobs:
   build:
@@ -29,6 +29,7 @@ jobs:
 
       - name: Copy README to dist
         run: |
+          mkdir -p dist
           cp README.md dist/
 
       - name: Publish package on NPM 📦

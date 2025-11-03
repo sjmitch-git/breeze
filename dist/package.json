@@ -1,17 +1,14 @@
 {
   "name": "@smitch/fluid",
   "version": "4.4.8",
-  "description": "A Next/React ui-component libray.",
+  "description": "A lightweight, Tailwind-powered React/Next.js UI component library.",
   "main": "index.js",
   "keywords": [
-    "ui",
-    "library",
-    "components",
-    "React",
-    "Next.js",
-    "TailwindCSS",
-    "Storybook",
-    "TypeScript"
+    "react",
+    "tailwindcss",
+    "ui-components",
+    "nextjs",
+    "breeze-ui"
   ],
   "author": "Stephen Mitchell",
   "license": "MIT",
@@ -31,10 +28,10 @@
     "prismjs": "^1.30.0"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
+    "react": ">=19",
     "react-dom": "^19.0.0",
-    "next": "^15.0.0",
-    "tailwindcss": "^3.4.14"
+    "next": ">=15",
+    "tailwindcss": ">=3"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.5"

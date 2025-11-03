@@ -23,7 +23,7 @@ module.exports = {
           light: colors.orange[300],
           dark: colors.orange[700],
         },
-        dark: colors.gray[900],
+        dark: colors.gray[800],
         light: colors.gray[100],
         info: {
           DEFAULT: colors.sky[400],

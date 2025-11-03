@@ -7,6 +7,13 @@ const meta: Meta = {
   title: "Media/Hero",
   component: Hero,
   tags: ["autodocs"],
+  decorators: [
+    (Story) => (
+      <div className="-mt-4 -mr-4 -ml-4">
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
       description: {
@@ -69,8 +76,9 @@ const htmlCopy = `<ul><li>- Dolor sit amet</li><li>- Aut ipsa voluptatem</li><li
 const buttons = () => {
   return (
     <div className="flex gap-4 justify-around items-center flex-grow">
-      <Button btnBackground="primary">Primary</Button>
-      <Button btnBackground="info">Info</Button>
+      <Button btnBackground="primary" layout="circle" size="xl" className="text-4xl" shadow="md">
+        CTA
+      </Button>
     </div>
   );
 };
@@ -79,12 +87,15 @@ export const Default: Story = {
   args: {
     title: "Hero Title",
     body: copy,
-    theme: "light",
+    theme: "responsive",
+    aspectRatio: "landscape",
+    layout: "col",
     align: "center",
     titleLevel: 1,
     titleTransform: "uppercase",
     titleWeight: "semibold",
     children: buttons(),
+    randomImage: false,
   },
   argTypes: {
     children: {
@@ -110,9 +121,17 @@ export const BackgroundImage: Story = {
     ...Default.args,
     title: "Background Image",
     theme: "dark",
-    titleLevel: 3,
+    titleLevel: 1,
     bgImage: "/img/mountains.avif",
-    body: "This story uses an image as a background",
+    randomImage: false,
+    aspectRatio: "landscape",
+    bgBlur: false,
+    bgGrayscale: "none",
+    body: (
+      <span className="text-lg drop-shadow-md bg-slate-500/50">
+        This story uses an image as a background
+      </span>
+    ),
   },
   argTypes: {
     ...Default.argTypes,
@@ -133,14 +152,17 @@ export const RandomImage: Story = {
   args: {
     ...Default.args,
     title: "Random Image",
-    titleLevel: 3,
+    titleLevel: 1,
     body: (
-      <span className="drop-shadow-md bg-slate-500/50">
-        This story uses a random image from picsum as a background
+      <span className="text-lg drop-shadow-md bg-slate-500/50">
+        This story uses a random image from LoremFlickr as a background
       </span>
     ),
-    theme: "dark",
-    bgImage: "https://picsum.photos/400/200",
+    randomImage: true,
+    categoryTags: "abstract,nature,landscape,texture,pattern",
+    aspectRatio: "landscape",
+    bgBlur: true,
+    bgGrayscale: "none",
   },
   argTypes: {
     ...Default.argTypes,
@@ -196,6 +218,7 @@ export const BackgroundVideo: Story = {
     bgBlur: true,
     bgGrayscale: "sepia",
     layout: "col",
+    aspectRatio: "video",
   },
   argTypes: {
     ...Default.argTypes,

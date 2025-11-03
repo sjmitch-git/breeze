@@ -4,6 +4,13 @@ import { Figure } from "..";
 const meta: Meta = {
   title: "Media/Figure",
   component: Figure,
+  decorators: [
+    (Story) => (
+      <div className="max-w-lg mx-auto p-4">
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     className: {
       table: {
