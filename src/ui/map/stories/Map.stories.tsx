@@ -5,6 +5,23 @@ import L from "leaflet";
 import { Map, MapMarker, MapCircle, MapPolygon, MapLine, MapRectangle } from "..";
 import { States } from "../../../data/states";
 
+const importInstructions = `
+### How to import the map components
+
+\`\`\`tsx
+// Map is required to render the map container
+// Other components are optional and can be used to add features to the map
+import {
+  Map,
+  MapMarker,
+  MapCircle,
+  MapPolygon,
+  MapLine,
+  MapRectangle,
+} from "@smitch/fluid/map";
+\`\`\`
+`;
+
 const meta: Meta<typeof Map> = {
   title: "Geo/Map",
   component: Map,
@@ -19,10 +36,9 @@ const meta: Meta<typeof Map> = {
     docs: {
       description: {
         component: `
-The **Map** component provides an interactive map using the Leaflet library.
-It supports adding markers, circles, and GeoJSON layers, and allows for customization
-of styles, controls, and interactivity. This component is ideal for visualizing spatial data
-in a flexible and responsive interface.
+The **Map** component provides an interactive Leaflet map.
+
+${importInstructions}
 
 ### Features
 - Display interactive maps with custom center and zoom levels.
@@ -86,46 +102,6 @@ export default App;
       },
       description: "Inline styles for the map container.",
     },
-    children: {
-      table: {
-        disable: true,
-      },
-    },
-    bounds: {
-      table: {
-        disable: true,
-      },
-    },
-    tileIndex: {
-      table: {
-        disable: true,
-      },
-    },
-    onDblClick: {
-      table: {
-        disable: true,
-      },
-    },
-    geojson: {
-      table: {
-        disable: true,
-      },
-    },
-    customTiles: {
-      table: {
-        disable: true,
-      },
-    },
-    layerColor: {
-      table: {
-        disable: true,
-      },
-    },
-    layerFillColor: {
-      table: {
-        disable: true,
-      },
-    },
     fullscreenControl: {
       control: "boolean",
       description: "Enables the fullscreen control. Set to `true` or a `FullscreenOptions` object.",
@@ -139,6 +115,14 @@ export default App;
       description: "Position of the fullscreen control.",
       defaultValue: "topleft",
     },
+    children: { table: { disable: true } },
+    bounds: { table: { disable: true } },
+    tileIndex: { table: { disable: true } },
+    onDblClick: { table: { disable: true } },
+    geojson: { table: { disable: true } },
+    customTiles: { table: { disable: true } },
+    layerColor: { table: { disable: true } },
+    layerFillColor: { table: { disable: true } },
   },
   tags: ["autodocs"],
 };

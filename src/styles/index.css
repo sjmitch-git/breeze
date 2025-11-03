@@ -8,5 +8,3 @@
 
 @import "tailwindcss/utilities";
 @import "./utilities/index.css";
-
-@import "./vendors/index.css";
