@@ -15,7 +15,7 @@ const meta: Meta<typeof RegisterForm> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="text-dark dark:text-light dark:bg-transparent max-w-2xl mx-auto">
+      <div className="max-w-md mx-auto">
         <Story />
       </div>
     ),

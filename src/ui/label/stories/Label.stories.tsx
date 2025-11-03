@@ -35,6 +35,13 @@ const passwordInputExample = `<Label label="Password:" layout="col" required>
 const meta: Meta = {
   title: "Forms/Label",
   component: Label,
+  decorators: [
+    (Story) => (
+      <div className="max-w-md mx-auto">
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
       source: {
@@ -64,13 +71,6 @@ ${emailInputExample}
     },
   },
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div className="text-dark dark:text-light bg-white dark:bg-transparent max-w-2xl mx-auto p-8">
-        <Story />
-      </div>
-    ),
-  ],
 } satisfies Meta<typeof Label>;
 
 export default meta;

@@ -17,7 +17,7 @@ const meta: Meta<typeof Form> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="text-dark dark:text-light bg-white dark:bg-transparent max-w-2xl mx-auto p-4">
+      <div className="max-w-md mx-auto">
         <Story />
       </div>
     ),
@@ -72,6 +72,7 @@ const meta: Meta<typeof Form> = {
   args: {
     buttonShape: "default",
     buttonTextcase: "normal-case",
+    submitColor: "light",
     className: "",
   },
   parameters: {
@@ -168,7 +169,6 @@ export const ContactForm: Story = {
     onsubmit: handleSubmit,
     showCancel: true,
     submitBackground: "primary",
-    submitColor: "dark",
     cancelBackground: "transparent",
     cancelColor: "current",
     separator: true,
@@ -314,7 +314,6 @@ export const LoginForm: Story = {
     showCancel: true,
     submitLabel: "Log-in",
     submitBackground: "primary",
-    submitColor: "dark",
     cancelBackground: "transparent",
     cancelColor: "current",
     separator: true,
@@ -328,7 +327,6 @@ export const AddressForm: Story = {
     children: AddressContent(),
     actionsLayout: "row",
     actionsSpacing: "0",
-    submitColor: "dark",
     buttonIsBold: true,
     buttonTextcase: "uppercase",
     name: "address-form",

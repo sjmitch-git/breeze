@@ -7,7 +7,7 @@ const meta: Meta = {
   component: Fieldset,
   decorators: [
     (Story) => (
-      <div className="text-dark dark:text-light bg-white dark:bg-transparent max-w-2xl mx-auto p-4">
+      <div className="max-w-2xl mx-auto p-4">
         <Story />
       </div>
     ),
@@ -147,6 +147,7 @@ export const Default: Story = {
     isBold: true,
     legendAlign: "center",
     spacing: "4",
+    className: "bg-light/50 dark:bg-dark/50",
     children: defaultContent(),
   },
 };
