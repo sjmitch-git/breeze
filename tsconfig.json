@@ -13,7 +13,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "inlineSources": true,
     "plugins": [
       {
         "name": "next"
