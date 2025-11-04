@@ -13,8 +13,7 @@
     "module": "ESNext",
     "target": "ES5",
     "esModuleInterop": true,
-    "sourceMap": true,
-    "inlineSources": true
+    "inlineSourceMap": true
   },
   "include": ["src/ui/**/*.ts", "src/ui/**/*.tsx"],
   "exclude": ["node_modules", "src/ui/**/stories/**/*"]
