@@ -54,8 +54,8 @@ const Dialog = ({
       ref={dialog}
       className={`dialog backdrop:bg-black dark:backdrop:bg-light backdrop:opacity-60 border-none ${
         modal
-          ? "shadow-none bg-light dark:bg-dark dark:text-light"
-          : "shadow-md shadow-dark dark:shadow-light bg-dark text-light dark:bg-light dark:text-dark rounded-md"
+          ? " bg-light dark:bg-dark dark:text-light"
+          : "bg-dark text-light dark:bg-light dark:text-dark rounded-md"
       }`}
     >
       <div className="dialog-header p-4">

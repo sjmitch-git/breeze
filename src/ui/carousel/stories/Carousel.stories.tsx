@@ -111,6 +111,11 @@ export const Custom: Story = {
         disable: true,
       },
     },
+    preloadImages: {
+      table: {
+        disable: true,
+      },
+    },
   },
   args: {
     gallery: false,

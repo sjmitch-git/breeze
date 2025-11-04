@@ -194,7 +194,7 @@ const Carousel = ({
         >
           {gallery ? (
             <Gallery
-              className={`oveflow-hidden !flex !gap-0 relative transition-all duration-500`}
+              className={`oveflow-hidden !flex !gap-0 relative transition-all duration-500 p-0 bg-transparent`}
               style={style}
               data={data}
               caption={caption}

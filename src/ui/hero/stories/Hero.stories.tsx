@@ -188,8 +188,9 @@ export const WithForm: Story = {
     theme: "dark",
     titleTransform: "capitalize",
     titleLevel: 2,
+    aspectRatio: "auto",
     children: (
-      <div className="dark bg-info-dark p-2">
+      <div className="dark bg-info-dark p-2 flex-grow relative">
         <Form {...NewsletterForm.args}>{NewsletterForm.args?.children}</Form>
       </div>
     ),
@@ -203,6 +204,11 @@ export const WithForm: Story = {
   },
   argTypes: {
     ...Default.argTypes,
+    aspectRatio: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 

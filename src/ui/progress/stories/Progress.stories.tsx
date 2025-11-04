@@ -87,13 +87,6 @@ ${modalExample}
       },
     },
   },
-  decorators: [
-    (Story) => (
-      <div className="p-8 max-w-prose mx-auto">
-        <Story />
-      </div>
-    ),
-  ],
   tags: ["autodocs"],
 };
 
@@ -133,6 +126,13 @@ const ProgressComponent = (args: { totalSize: number; onDone?: () => void }) => 
 
 export const SimpleProgress: Story = {
   render: (args) => <ProgressComponent {...args} />,
+  decorators: [
+    (Story) => (
+      <div className="p-8 max-w-prose mx-auto">
+        <Story />
+      </div>
+    ),
+  ],
   args: {
     id: "progress-demo",
     totalSize: 245,
