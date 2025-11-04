@@ -8,4 +8,4 @@ Disallow: /
 Host: https://fluid-ui.vercel.app
 
 # Sitemaps
-Sitemap: https://fluid-ui.vercel.app/sitemap.xml
+Sitemap: https://breezeui.site/sitemap.xml

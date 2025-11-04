@@ -1,8 +1,8 @@
-# Fluid UI
+# Breeze UI
 
 A Next.js/React UI component library.
 
-- [Fluid UI](#fluid-ui)
+- [Breeze UI](#breeze-ui)
   - [Overview](#overview)
   - [Features](#features)
   - [Getting Started](#getting-started)
@@ -38,7 +38,7 @@ A Next.js/React UI component library.
 
 ## Overview
 
-Fluid UI is a comprehensive library of reusable UI components for Next.js/React applications. This
+Breeze UI is a comprehensive library of reusable UI components for Next.js/React applications. This
 library is designed to streamline the development process and ensure consistency across projects.
 
 ## Features
@@ -50,7 +50,7 @@ library is designed to streamline the development process and ensure consistency
 
 ## Getting Started
 
-To use Fluid UI in your Next.js/React project, follow these steps:
+To use Breeze UI in your Next.js/React project, follow these steps:
 
 ### 1. Install Next.js and React
 
@@ -70,10 +70,10 @@ including `tsconfig.json`, `tailwind.config.js`, and PostCSS setup.
 
 ### 2. Configure Tailwind 3
 
-To ensure that **Fluid UI** works correctly, you need to configure **TailwindCSS**. Follow the steps
-below:
+To ensure that **Breeze UI** works correctly, you need to configure **TailwindCSS**. Follow the
+steps below:
 
-Note: All current Fluid releases utilize TailwindCSS v3.
+Note: All current Breeze releases utilize TailwindCSS v3.
 
 #### 2. Configure `tailwind.config.js`
 
@@ -92,7 +92,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     /* IMPORTANT: Add this line: */
-    "./node_modules/@smitch/fluid/**/*.js",
+    "./node_modules/@smitch/Breeze/**/*.js",
   ],
   theme: {
     extend: {
@@ -159,28 +159,28 @@ export default config;
 ## Installation
 
 ```bash
-npm install @smitch/fluid
+npm install @smitch/breeze
 ```
 
 ## Compatibility
 
 ### Supported stacks & compatibility matrix
 
-Use the table below to pick the Fluid major line that matches your app's React / Next.js and
+Use the table below to pick the Breeze major line that matches your app's React / Next.js and
 Tailwind versions. This helps avoid peer dependency conflicts.
 
-- Fluid v4.x (current):
+- Breeze v4.x (current):
 
   - React: 19.x
   - Next.js: 15.x
   - Tailwind: 3.x
-  - Install: `npm install @smitch/fluid`
+  - Install: `npm install @smitch/breeze`
 
-- Fluid v3.x:
+- Breeze v3.x:
   - React: 18.x
   - Next.js: 14.x (and other releases built on React 18)
   - Tailwind: 3.x
-  - Install: `npm install @smitch/fluid@^3`
+  - Install: `npm install @smitch/Breeze@^3`
 
 ### Node / environment
 
@@ -193,8 +193,8 @@ Tailwind versions. This helps avoid peer dependency conflicts.
 
 ## Peer dependencies
 
-Fluid is a component library and expects the host app to provide framework/runtime dependencies.
-Below are the packages you should have installed in your project when using `@smitch/fluid`.
+Breeze is a component library and expects the host app to provide framework/runtime dependencies.
+Below are the packages you should have installed in your project when using `@smitch/Breeze`.
 
 Required (framework)
 
@@ -231,10 +231,10 @@ npm install -D @types/leaflet
 
 ## Basic Usage
 
-Now, you can import and use any Fluid UI [component](#components) in your Next.js project:
+Now, you can import and use any Breeze UI [component](#components) in your Next.js project:
 
 ```jsx
-import { Button } from "@smitch/fluid";
+import { Button } from "@smitch/Breeze";
 
 const App = () => <Button>Click me</Button>;
 
@@ -264,7 +264,7 @@ npm install chart.js react-chartjs-2
 ### Chart Usage Example
 
 ```jsx
-import { BarChart } from "@smitch/fluid/charts";
+import { BarChart } from "@smitch/Breeze/charts";
 
 const App = () => {
   return (
@@ -321,7 +321,7 @@ npm install -D @types/leaflet @types/leaflet.fullscreen
 #### Static Map
 
 ```jsx
-import { Map } from "@smitch/fluid/map";
+import { Map } from "@smitch/Breeze/map";
 
 const App = () => {
   return (
@@ -343,7 +343,7 @@ export default App;
 #### Map with marker
 
 ```jsx
-import { Map, MapMarker } from "@smitch/fluid/map";
+import { Map, MapMarker } from "@smitch/Breeze/map";
 
 const App = () => {
   return (
@@ -373,113 +373,108 @@ export default App;
 
 ### Buttons
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/buttons-button--docs'>Button</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/buttons-button-close-button--docs'>Close
-  Button</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/buttons-button-group--docs'>Button Group</a>
+- <a href='https://breezeui.site/?path=/docs/buttons-button--docs'>Button</a>
+- <a href='https://breezeui.site/?path=/docs/buttons-button-close-button--docs'>Close Button</a>
+- <a href='https://breezeui.site/?path=/docs/buttons-button-group--docs'>Button Group</a>
 
 ### Inputs
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-autocomplete--docs'>
+- <a href='https://breezeui.site/?path=/docs/inputs-autocomplete--docs'>
   	Autocomplete
   </a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-checkbox--docs'>Checkbox</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-counter--docs'>Counter</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-file-upload--docs'>File Upload</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-input--docs'>Input</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-password-input--docs'>Password Input</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-radiog-roup--docs'>Radio Group</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-range-input--docs'>Range Input</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-search-input--docs'>Search Input</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-select--docs'>Select</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-switch--docs'>Switch</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-textarea--docs'>Textarea</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/inputs-text-input--docs'>Text Input</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-checkbox--docs'>Checkbox</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-counter--docs'>Counter</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-file-upload--docs'>File Upload</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-input--docs'>Input</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-password-input--docs'>Password Input</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-radiog-roup--docs'>Radio Group</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-range-input--docs'>Range Input</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-search-input--docs'>Search Input</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-select--docs'>Select</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-switch--docs'>Switch</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-textarea--docs'>Textarea</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-text-input--docs'>Text Input</a>
 
 ### Forms
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/forms-fieldset--docs'>Fieldset</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/forms-form--docs'>Form</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/forms-label--docs'>Label</a>
+- <a href='https://breezeui.site/?path=/docs/forms-fieldset--docs'>Fieldset</a>
+- <a href='https://breezeui.site/?path=/docs/forms-form--docs'>Form</a>
+- <a href='https://breezeui.site/?path=/docs/forms-label--docs'>Label</a>
 
 ### Menus
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-accordion--docs'>Accordion</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-breadcrumbs--docs'>Breadcrumbs</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-carousel--docs'>Carousel</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-drawer--docs'>Drawer</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-dropdown--docs'>Dropdown</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-navbar--docs'>NavBar</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-pagination--docs'>Pagination</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-sidebar--docs'>Sidebar</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/menus-tabs--docs'>Tabs</a>
+- <a href='https://breezeui.site/?path=/docs/menus-accordion--docs'>Accordion</a>
+- <a href='https://breezeui.site/?path=/docs/menus-breadcrumbs--docs'>Breadcrumbs</a>
+- <a href='https://breezeui.site/?path=/docs/menus-carousel--docs'>Carousel</a>
+- <a href='https://breezeui.site/?path=/docs/menus-drawer--docs'>Drawer</a>
+- <a href='https://breezeui.site/?path=/docs/menus-dropdown--docs'>Dropdown</a>
+- <a href='https://breezeui.site/?path=/docs/menus-navbar--docs'>NavBar</a>
+- <a href='https://breezeui.site/?path=/docs/menus-pagination--docs'>Pagination</a>
+- <a href='https://breezeui.site/?path=/docs/menus-sidebar--docs'>Sidebar</a>
+- <a href='https://breezeui.site/?path=/docs/menus-tabs--docs'>Tabs</a>
 
 ### Feedback
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-alert--docs'>Alert</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-badge--docs'>Badge</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-dialog--docs'>Dialog</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-loading--docs'>Loading</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-progress--docs'>Progress</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-ratings--docs'>Ratings</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-ticker--docs'>Ticker</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/feedback-toast--docs'>Toast</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-alert--docs'>Alert</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-badge--docs'>Badge</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-dialog--docs'>Dialog</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-loading--docs'>Loading</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-progress--docs'>Progress</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-ratings--docs'>Ratings</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-ticker--docs'>Ticker</a>
+- <a href='https://breezeui.site/?path=/docs/feedback-toast--docs'>Toast</a>
 
 ### Media
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-card--docs'>Card</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-figure--docs'>Figure</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-gallery--docs'>Gallery</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-hero--docs'>Hero</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-icon--docs'>Icon</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-modal--docs'>Modal</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-placeholder--docs'>PlaceHolder</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-twitter-embed--docs'>Twitter Embed</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-twitter-embed--docs'>Twitter Timeline</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-video--docs'>Video</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-video-player--docs'>Video Player</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/media-youtube-embed--docs'>YouTube Embed</a>
+- <a href='https://breezeui.site/?path=/docs/media-card--docs'>Card</a>
+- <a href='https://breezeui.site/?path=/docs/media-figure--docs'>Figure</a>
+- <a href='https://breezeui.site/?path=/docs/media-gallery--docs'>Gallery</a>
+- <a href='https://breezeui.site/?path=/docs/media-hero--docs'>Hero</a>
+- <a href='https://breezeui.site/?path=/docs/media-icon--docs'>Icon</a>
+- <a href='https://breezeui.site/?path=/docs/media-modal--docs'>Modal</a>
+- <a href='https://breezeui.site/?path=/docs/media-placeholder--docs'>PlaceHolder</a>
+- <a href='https://breezeui.site/?path=/docs/media-twitter-embed--docs'>Twitter Embed</a>
+- <a href='https://breezeui.site/?path=/docs/media-twitter-embed--docs'>Twitter Timeline</a>
+- <a href='https://breezeui.site/?path=/docs/media-video--docs'>Video</a>
+- <a href='https://breezeui.site/?path=/docs/media-video-player--docs'>Video Player</a>
+- <a href='https://breezeui.site/?path=/docs/media-youtube-embed--docs'>YouTube Embed</a>
 
 ### Typography
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/typography-blockquote--docs'>Blockquote</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/typography-codeblock--docs'>Codeblock</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/typography-heading--docs'>Heading</a>
+- <a href='https://breezeui.site/?path=/docs/typography-blockquote--docs'>Blockquote</a>
+- <a href='https://breezeui.site/?path=/docs/typography-codeblock--docs'>Codeblock</a>
+- <a href='https://breezeui.site/?path=/docs/typography-heading--docs'>Heading</a>
 
 ### Data Visualization
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-data-table--docs'>Data
-  Table</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-pictogram--docs'>Pictogram</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-line-chart--docs'>Line
+- <a href='https://breezeui.site/?path=/docs/data-visualization-data-table--docs'>Data Table</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-pictogram--docs'>Pictogram</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-line-chart--docs'>Line Chart</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-bar-chart--docs'>Bar Chart</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-mixed-chart--docs'>Mixed Chart</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-pie-chart--docs'>Pie Chart</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-doughnut-chart--docs'>Doughnut
   Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-bar-chart--docs'>Bar Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-mixed-chart--docs'>Mixed
+- <a href='https://breezeui.site/?path=/docs/data-visualization-radar-chart--docs'>Radar Chart</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-polar-area-chart--docs'>PolarArea
   Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-pie-chart--docs'>Pie Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-doughnut-chart--docs'>Doughnut
+- <a href='https://breezeui.site/?path=/docs/data-visualization-scatter-chart--docs'>Scatter
   Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-radar-chart--docs'>Radar
-  Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-polar-area-chart--docs'>PolarArea
-  Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-scatter-chart--docs'>Scatter
-  Chart</a>
-- <a href='https://fluid-ui.vercel.app/?path=/docs/data-visualization-stat-bar--docs'>Stat Bar</a>
+- <a href='https://breezeui.site/?path=/docs/data-visualization-stat-bar--docs'>Stat Bar</a>
 
 ### Time
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/time-clock--docs'>Clock</a>
+- <a href='https://breezeui.site/?path=/docs/time-clock--docs'>Clock</a>
 
 ### Maps
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/maps-map--docs'>Map</a>
+- <a href='https://breezeui.site/?path=/docs/maps-map--docs'>Map</a>
 
 ### Social Media
 
-- <a href='https://fluid-ui.vercel.app/?path=/docs/social-socialshare--docs'>Social Media Share</a>
+- <a href='https://breezeui.site/?path=/docs/social-socialshare--docs'>Social Media Share</a>
 
 ## Author
 
-Fluid UI is developed and maintained by
+Breeze UI is developed and maintained by
 [Stephen Mitchell](https://www.linkedin.com/in/stephen-m-52a3a4192).

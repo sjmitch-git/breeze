@@ -2,8 +2,8 @@ import { create } from "storybook/theming";
 
 export default create({
   base: "light",
-  brandTitle: "Fluid UI",
-  brandUrl: "https://fluid-ui.vercel.app/",
-  brandImage: "https://fluid-ui.vercel.app/img/logo.png",
+  brandTitle: "Breeze UI",
+  brandUrl: "https://breezeui.site/",
+  brandImage: "/brand.png",
   brandTarget: "_blank",
 });
