@@ -2,6 +2,8 @@
 
 A Next.js/React UI component library.
 
+Live demo: https://breezeui.site
+
 - [Breeze UI](#breeze-ui)
   - [Overview](#overview)
   - [Features](#features)
