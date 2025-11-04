@@ -65,6 +65,7 @@ export const Default: Story = {
     iconPosition: "right",
     iconColor: "current",
     layout: "default",
+    background: "responsive",
     opened: "1",
     size: "md",
   },
@@ -103,7 +104,9 @@ export const Custom: Story = (args: AccordionProps) => {
           title="Brand"
           icon={args.icon}
           iconPosition={args.iconPosition}
+          iconColor={args.iconColor}
           layout={args.layout}
+          background={args.background}
         >
           <div className="p-4 flex flex-col gap-4">
             <Label
@@ -181,6 +184,8 @@ export const Custom: Story = (args: AccordionProps) => {
           title="Colour"
           icon={args.icon}
           iconPosition={args.iconPosition}
+          iconColor={args.iconColor}
+          background={args.background}
         >
           <div className="p-4 flex flex-col gap-4">
             <Label
@@ -242,6 +247,8 @@ export const Custom: Story = (args: AccordionProps) => {
           title="Size"
           icon={args.icon}
           iconPosition={args.iconPosition}
+          iconColor={args.iconColor}
+          background={args.background}
         >
           <div className="p-4 flex flex-col gap-4">
             <Label
@@ -319,6 +326,7 @@ Custom.args = {
   icon: "symbol",
   iconPosition: "right",
   layout: "default",
+  background: "responsive",
   size: "md",
 };
 

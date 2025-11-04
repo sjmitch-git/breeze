@@ -16,6 +16,7 @@ export interface AccordionProps {
   children?: React.ReactNode;
   opened?: string;
   layout?: "default" | "flush" | "spaced";
+  background?: "responsive" | "transparent";
   icon?: "symbol" | "arrow";
   iconPosition?: "left" | "right";
   iconColor?: "info" | "success" | "warning" | "danger" | "primary" | "secondary" | "current";
@@ -51,7 +52,10 @@ export interface AccordionItemProps {
   title: string;
   icon?: "symbol" | "arrow";
   iconPosition?: "left" | "right";
+  iconColor?: "info" | "success" | "warning" | "danger" | "primary" | "secondary" | "current";
   layout?: "default" | "flush" | "spaced";
+  background?: "responsive" | "transparent";
   open: string;
   setOpen: (id: string) => void;
+  className?: string;
 }

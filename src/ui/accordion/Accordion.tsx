@@ -20,6 +20,11 @@ const layouts = {
   spaced: "mb-2 border",
 };
 
+const backgrounds = {
+  responsive: "bg-light text-dark dark:bg-dark dark:text-light",
+  transparent: "bg-transparent text-inherit",
+};
+
 const Accordion = ({
   className = "",
   style,
@@ -27,6 +32,7 @@ const Accordion = ({
   data,
   opened,
   layout = "default",
+  background = "responsive",
   icon = "symbol",
   iconPosition = "right",
   iconColor,
@@ -40,6 +46,7 @@ const Accordion = ({
 
   const sizeClasses = useMemo(() => sizes[size], [size]);
   const layoutClasses = useMemo(() => layouts[layout], [layout]);
+  const backgroundClasses = useMemo(() => backgrounds[background], [background]);
 
   return (
     <div
@@ -50,7 +57,7 @@ const Accordion = ({
       {data ? (
         data.map((item) => (
           <div
-            className={`accordion-wrapper ${layoutClasses} bg-light text-dark dark:bg-dark dark:text-light border-slate-300 dark:border-slate-500`}
+            className={`accordion-wrapper ${layoutClasses} ${backgroundClasses} border-slate-300 dark:border-slate-500`}
             key={item.id}
           >
             <AccordionHead
