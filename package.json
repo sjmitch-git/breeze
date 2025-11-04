@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "tsc --project tsconfig.build.json && next build --turbopack",
+    "build": "next build --turbopack && tsc -p tsconfig.build.json",
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
