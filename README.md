@@ -1,5 +1,8 @@
 # Breeze UI
 
+[![npm version](https://img.shields.io/npm/v/@smitch/breeze?color=cb0000&logo=npm)](https://www.npmjs.com/package/@smitch/breeze)
+[![npm downloads](https://img.shields.io/npm/dm/@smitch/breeze?color=success)](https://www.npmjs.com/package/@smitch/breeze)
+
 A Next.js/React UI component library.
 
 Live demo: https://breezeui.site
