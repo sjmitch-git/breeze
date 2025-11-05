@@ -95,11 +95,41 @@ const FullscreenControlHandler = ({
   return null;
 };
 
+const AutoFitBounds = () => {
+  const map = useMap();
+
+  useEffect(() => {
+    const fit = () => {
+      const bounds = map.getBounds();
+      if (
+        bounds.isValid() &&
+        !bounds.equals([
+          [0, 0],
+          [0, 0],
+        ])
+      ) {
+        map.fitBounds(bounds, { maxZoom: 17 });
+      }
+    };
+
+    const timer = setTimeout(fit, 100);
+    map.on("layeradd", fit);
+
+    return () => {
+      clearTimeout(timer);
+      map.off("layeradd", fit);
+    };
+  }, [map]);
+
+  return null;
+};
+
 const LazyMap = ({
   center,
   bounds,
   zoom,
   zoomControl = true,
+  autoFit = false,
   fullscreenControl = true,
   fullscreenControlPosition = "topleft",
   tilesControl = true,
@@ -176,6 +206,8 @@ const LazyMap = ({
       bounds={bounds}
       zoom={zoom}
       zoomControl={zoomControl}
+      minZoom={3}
+      maxZoom={19}
       attributionControl={attributionControl}
       dragging={dragging}
       scrollWheelZoom={scrollWheelZoom}
@@ -221,6 +253,7 @@ const LazyMap = ({
         <ClickHandler onDblClick={onDblClick} dragging={dragging} />
         {geojson && <GeoJSON data={geojson} onEachFeature={handleEachFeature} />}
         {children}
+        {autoFit !== false && <AutoFitBounds />}
       </>
     </MapContainer>
   );

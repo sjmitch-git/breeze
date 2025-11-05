@@ -15,6 +15,7 @@ export interface MapProps {
   bounds?: LatLngBoundsExpression;
   zoom?: number;
   zoomControl?: boolean;
+  autoFit?: boolean;
   fullscreenControl?: boolean;
   fullscreenControlPosition?: "topleft" | "topright" | "bottomleft" | "bottomright";
   tilesControl?: boolean;

@@ -77,17 +77,18 @@ export default App;
     fullscreenControlPosition: "topleft",
     tilesControl: true,
     attributionControl: true,
+    autoFit: false,
   },
   argTypes: {
     center: {
       control: "object",
       description: "The initial center of the map, as [latitude, longitude].",
-      defaultValue: [51.505, -0.09],
+      defaultValue: undefined,
     },
     zoom: {
       control: "number",
       description: "The initial zoom level of the map.",
-      defaultValue: 13,
+      defaultValue: undefined,
     },
     className: {
       table: {
@@ -177,8 +178,7 @@ export const Polygon: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
-    zoom: undefined,
-    center: undefined,
+    autoFit: true,
   },
   render: (args) => {
     const polygonPositions: L.LatLngExpression[] = [
@@ -205,8 +205,7 @@ export const Line: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
-    zoom: undefined,
-    center: undefined,
+    autoFit: true,
   },
   render: (args) => {
     const linePositions: L.LatLngExpression[] = [
@@ -262,10 +261,8 @@ const rectangleBounds = L.latLngBounds(rectangle);
 
 export const Rectangle: Story = {
   args: {
-    // center: [51.505, -0.09],
     style: { height: "400px", width: "100%" },
-    zoom: undefined,
-    center: undefined,
+    autoFit: true,
   },
   render: (args) => (
     <Map {...args} bounds={rectangleBounds.pad(0.5)}>
@@ -311,8 +308,7 @@ export const CustomMarkers: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
-    zoom: undefined,
-    center: undefined,
+    autoFit: true,
   },
   parameters: {
     docs: {
@@ -436,6 +432,7 @@ export const BubbleMarkers: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
+    autoFit: true,
   },
   render: (args) => {
     const bounds = L.latLngBounds(cities.map((city) => [city.latlon[0], city.latlon[1]]));
@@ -497,7 +494,7 @@ export const WithGeojson: Story = {
   name: "GeoJSON Layers",
   args: {
     center: [37.8, -96],
-    zoom: 2,
+    zoom: 3,
     geojson: StatesWithFillColor,
     style: { height: "400px", width: "100%" },
   },
