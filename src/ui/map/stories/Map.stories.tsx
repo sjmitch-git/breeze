@@ -177,6 +177,8 @@ export const Polygon: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
+    zoom: undefined,
+    center: undefined,
   },
   render: (args) => {
     const polygonPositions: L.LatLngExpression[] = [
@@ -203,6 +205,8 @@ export const Line: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
+    zoom: undefined,
+    center: undefined,
   },
   render: (args) => {
     const linePositions: L.LatLngExpression[] = [
@@ -258,8 +262,10 @@ const rectangleBounds = L.latLngBounds(rectangle);
 
 export const Rectangle: Story = {
   args: {
-    center: [51.505, -0.09],
+    // center: [51.505, -0.09],
     style: { height: "400px", width: "100%" },
+    zoom: undefined,
+    center: undefined,
   },
   render: (args) => (
     <Map {...args} bounds={rectangleBounds.pad(0.5)}>
@@ -305,6 +311,8 @@ export const CustomMarkers: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
+    zoom: undefined,
+    center: undefined,
   },
   parameters: {
     docs: {
