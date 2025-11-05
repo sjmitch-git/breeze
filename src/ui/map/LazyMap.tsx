@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Map as LMap, Layer, LeafletMouseEvent, Control } from "leaflet";
 import { MapContainer, TileLayer, LayersControl, useMap, GeoJSON } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import "leaflet.fullscreen/Control.FullScreen.css";
 import "leaflet.fullscreen";
 import { tileOptions as defaultTileOptions } from "./tileOptions";
@@ -181,10 +181,13 @@ const LazyMap = ({
       scrollWheelZoom={scrollWheelZoom}
       doubleClickZoom={doubleClickZoom}
       className={className}
-      style={style}
+      style={{ width: "100%", height: "100%", ...style }}
       ref={(ref) => {
         if (ref) {
           mapRef.current = ref;
+          setTimeout(() => {
+            mapRef.current?.invalidateSize();
+          }, 0);
         }
       }}
     >
