@@ -217,9 +217,10 @@ const LazyMap = ({
       ref={(ref) => {
         if (ref) {
           mapRef.current = ref;
-          setTimeout(() => {
-            mapRef.current?.invalidateSize();
-          }, 0);
+          requestAnimationFrame(() => {
+            ref.invalidateSize();
+            setTimeout(() => ref.invalidateSize(), 150);
+          });
         }
       }}
     >
