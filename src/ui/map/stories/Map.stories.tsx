@@ -168,7 +168,7 @@ export const DefaultMarkers: Story = {
   render: (args) => (
     <Map {...args}>
       <MapMarker position={[51.505, -0.09]} popupContent="Marker 1" />
-      <MapMarker position={[51.51, -0.1]} />
+      <MapMarker position={[51.51, -0.1]} popupContent="Marker 2" />
     </Map>
   ),
 };
