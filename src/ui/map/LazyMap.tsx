@@ -202,6 +202,7 @@ const LazyMap = ({
 
   return (
     <MapContainer
+      key={crypto.randomUUID()}
       center={center}
       bounds={bounds}
       zoom={zoom}
