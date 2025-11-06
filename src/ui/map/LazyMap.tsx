@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Map as LMap, Layer, LeafletMouseEvent, Control, LatLngBoundsExpression } from "leaflet";
 import { MapContainer, TileLayer, LayersControl, useMap, GeoJSON } from "react-leaflet";
+import type { Map as LeafletMap } from "leaflet";
 import "leaflet.fullscreen/Control.FullScreen.css";
 import "leaflet.fullscreen";
 import { tileOptions as defaultTileOptions } from "./tileOptions";
@@ -102,6 +103,18 @@ const FullscreenControlHandler = ({
   return null;
 };
 
+const FitBoundsOnLoad = ({ bounds }: { bounds?: LatLngBoundsExpression }) => {
+  const map = useMap();
+
+  map.whenReady(() => {
+    if (bounds) {
+      map.fitBounds(bounds);
+    }
+  });
+
+  return null;
+};
+
 const LazyMap = ({
   center,
   bounds,
@@ -124,7 +137,7 @@ const LazyMap = ({
   customTiles = [],
   children,
 }: MapProps) => {
-  const mapRef = useRef<LMap | null>(null);
+  const mapRef = useRef<LeafletMap | null>(null);
   const tileOptions = [...defaultTileOptions, ...customTiles];
 
   const zoomToFeature = (e: LeafletMouseEvent) => {
@@ -179,7 +192,6 @@ const LazyMap = ({
 
   return (
     <MapContainer
-      key={crypto.randomUUID()}
       center={center}
       bounds={bounds}
       zoom={zoom}
@@ -192,13 +204,11 @@ const LazyMap = ({
       doubleClickZoom={doubleClickZoom}
       className={className}
       style={{ width: "100%", height: "100%", ...style }}
-      ref={(ref) => {
-        if (ref) {
-          mapRef.current = ref;
-          requestAnimationFrame(() => {
-            ref.invalidateSize();
-            setTimeout(() => ref.invalidateSize(), 150);
-          });
+      ref={(map) => {
+        mapRef.current = map;
+        if (map) {
+          requestAnimationFrame(() => map.invalidateSize());
+          setTimeout(() => map.invalidateSize(), 150);
         }
       }}
     >
@@ -230,6 +240,7 @@ const LazyMap = ({
           fullscreenControlPosition={fullscreenControlPosition}
           bounds={bounds}
         />
+        <FitBoundsOnLoad bounds={bounds} />
         <ClickHandler onDblClick={onDblClick} dragging={dragging} />
         {geojson && <GeoJSON data={geojson} onEachFeature={handleEachFeature} />}
         {children}
