@@ -1,11 +1,90 @@
-# *
-User-agent: *
+# =============================================
+#  BREEZEUI.SITE – FINAL 2025 ROBOTS.TXT
+#  Blocks AI scrapers + Cookiebot noise
+#  Keeps Google, Bing, Twitter 100% happy
+# =============================================
+
+# 1. FRIENDLY BOTS – FULL ACCESS
+User-agent: Twitterbot
 Allow: /
-User-agent: amazonbot
+
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+
+# 2. PRIVACY SCANNER – STOP THE NOISE
+User-agent: Cookiebot
 Disallow: /
 
+# 3. AI / SCRAPERS – HARD NO
+User-agent: Amazonbot
+User-agent: amazon-kendra
+User-agent: amazon-QBusiness
+User-agent: AwarioRss
+User-agent: AwarioSmartBot
+User-agent: *amazon*
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: omgili
+Disallow: /
+User-agent: omgilibot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: cohere-ai
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: PetalBot
+Disallow: /
+User-agent: Scrapy
+Disallow: /
+User-agent: Applebot-Extended
+Disallow: /
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: Perplexity-User
+Disallow: /
+User-agent: Google-CloudVertexBot
+Disallow: /
+User-agent: meta-externalagent
+Disallow: /
+User-agent: OAI-SearchBot
+Disallow: /
+User-agent: YandexAdditional
+Disallow: /
+User-agent: YandexAdditionalBot
+Disallow: /
+User-agent: TurnitinBot
+Disallow: /
+User-agent: DataForSeoBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+
+# 4. EVERYONE ELSE – PROTECT PRIVATE PAGES
+User-agent: *
+Allow: /
+
 # Host
-Host: https://fluid-ui.vercel.app
+Host: https://breezeui.site
 
 # Sitemaps
 Sitemap: https://breezeui.site/sitemap.xml

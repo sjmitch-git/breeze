@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { Map as LMap, Layer, LeafletMouseEvent, Control, LatLngBoundsExpression } from "leaflet";
+import { Layer, LeafletMouseEvent, Control, LatLngBoundsExpression } from "leaflet";
 import { MapContainer, TileLayer, LayersControl, useMap, GeoJSON } from "react-leaflet";
 import type { Map as LeafletMap } from "leaflet";
 import "leaflet.fullscreen/Control.FullScreen.css";
@@ -103,18 +103,6 @@ const FullscreenControlHandler = ({
   return null;
 };
 
-/* const FitBoundsOnLoad = ({ bounds }: { bounds?: LatLngBoundsExpression }) => {
-  const map = useMap();
-
-  map.whenReady(() => {
-    if (bounds) {
-      map.fitBounds(bounds);
-    }
-  });
-
-  return null;
-}; */
-
 const LazyMap = ({
   center,
   bounds,
@@ -207,10 +195,6 @@ const LazyMap = ({
       ref={(map) => {
         mapRef.current = map;
         if (map) {
-          map.whenReady(() => {
-            console.log("map ready");
-            if (bounds) map.fitBounds(bounds);
-          });
           requestAnimationFrame(() => map.invalidateSize());
           setTimeout(() => map.invalidateSize(), 150);
         }
