@@ -77,7 +77,6 @@ export default App;
     fullscreenControlPosition: "topleft",
     tilesControl: true,
     attributionControl: true,
-    autoFit: false,
   },
   argTypes: {
     center: {
@@ -178,7 +177,6 @@ export const Polygon: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
-    autoFit: true,
   },
   render: (args) => {
     const polygonPositions: L.LatLngExpression[] = [
@@ -205,7 +203,6 @@ export const Line: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
-    autoFit: true,
   },
   render: (args) => {
     const linePositions: L.LatLngExpression[] = [
@@ -262,7 +259,6 @@ const rectangleBounds = L.latLngBounds(rectangle);
 export const Rectangle: Story = {
   args: {
     style: { height: "400px", width: "100%" },
-    autoFit: true,
   },
   render: (args) => (
     <Map {...args} bounds={rectangleBounds.pad(0.5)}>
@@ -308,7 +304,6 @@ export const CustomMarkers: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
-    autoFit: true,
   },
   parameters: {
     docs: {
@@ -432,7 +427,6 @@ export const BubbleMarkers: Story = {
   args: {
     tileIndex: 1,
     style: { height: "400px", width: "100%" },
-    autoFit: true,
   },
   render: (args) => {
     const bounds = L.latLngBounds(cities.map((city) => [city.latlon[0], city.latlon[1]]));

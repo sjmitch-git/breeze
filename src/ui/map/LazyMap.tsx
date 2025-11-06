@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { Map as LMap, Layer, LeafletMouseEvent, Control } from "leaflet";
+import { Map as LMap, Layer, LeafletMouseEvent, Control, LatLngBoundsExpression } from "leaflet";
 import { MapContainer, TileLayer, LayersControl, useMap, GeoJSON } from "react-leaflet";
 import "leaflet.fullscreen/Control.FullScreen.css";
 import "leaflet.fullscreen";
@@ -45,9 +45,11 @@ const ClickHandler = ({ onDblClick, dragging }: ClickHandlerProps) => {
 const FullscreenControlHandler = ({
   fullscreenControl,
   fullscreenControlPosition,
+  bounds,
 }: {
   fullscreenControl?: boolean | Control.FullscreenOptions;
   fullscreenControlPosition?: "topleft" | "topright" | "bottomleft" | "bottomright";
+  bounds?: LatLngBoundsExpression;
 }) => {
   const map = useMap();
   const controlRef = useRef<L.Control | null>(null);
@@ -74,15 +76,20 @@ const FullscreenControlHandler = ({
       controlRef.current = fullscreen;
     }
 
-    const handleFullscreenChange = () => {
-      const isFullscreen =
-        (map as L.Map & { isFullscreen?: () => boolean }).isFullscreen?.() ?? false;
-      if (controlRef.current) {
-        (controlRef.current as any).togglePseudoFullscreen?.(isFullscreen);
-      }
+    const setBounds = () => {
+      if (!bounds) return;
+      setTimeout(() => {
+        map.fitBounds(bounds);
+      }, 150);
     };
 
-    map.on("fullscreenchange", handleFullscreenChange);
+    map.on("enterFullscreen", function () {
+      setBounds();
+    });
+
+    map.on("exitFullscreen", function () {
+      setBounds();
+    });
 
     return () => {
       if (controlRef.current) {
@@ -95,41 +102,11 @@ const FullscreenControlHandler = ({
   return null;
 };
 
-const AutoFitBounds = () => {
-  const map = useMap();
-
-  useEffect(() => {
-    const fit = () => {
-      const bounds = map.getBounds();
-      if (
-        bounds.isValid() &&
-        !bounds.equals([
-          [0, 0],
-          [0, 0],
-        ])
-      ) {
-        map.fitBounds(bounds, { maxZoom: 17 });
-      }
-    };
-
-    const timer = setTimeout(fit, 100);
-    map.on("layeradd", fit);
-
-    return () => {
-      clearTimeout(timer);
-      map.off("layeradd", fit);
-    };
-  }, [map]);
-
-  return null;
-};
-
 const LazyMap = ({
   center,
   bounds,
   zoom,
   zoomControl = true,
-  autoFit = false,
   fullscreenControl = true,
   fullscreenControlPosition = "topleft",
   tilesControl = true,
@@ -149,15 +126,6 @@ const LazyMap = ({
 }: MapProps) => {
   const mapRef = useRef<LMap | null>(null);
   const tileOptions = [...defaultTileOptions, ...customTiles];
-
-  useEffect(() => {
-    return () => {
-      if (mapRef.current) {
-        mapRef.current.remove();
-        mapRef.current = null;
-      }
-    };
-  }, []);
 
   const zoomToFeature = (e: LeafletMouseEvent) => {
     const layer = e.target as Layer;
@@ -260,11 +228,11 @@ const LazyMap = ({
         <FullscreenControlHandler
           fullscreenControl={fullscreenControl}
           fullscreenControlPosition={fullscreenControlPosition}
+          bounds={bounds}
         />
         <ClickHandler onDblClick={onDblClick} dragging={dragging} />
         {geojson && <GeoJSON data={geojson} onEachFeature={handleEachFeature} />}
         {children}
-        {autoFit !== false && <AutoFitBounds />}
       </>
     </MapContainer>
   );
