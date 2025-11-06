@@ -103,7 +103,7 @@ const FullscreenControlHandler = ({
   return null;
 };
 
-const FitBoundsOnLoad = ({ bounds }: { bounds?: LatLngBoundsExpression }) => {
+/* const FitBoundsOnLoad = ({ bounds }: { bounds?: LatLngBoundsExpression }) => {
   const map = useMap();
 
   map.whenReady(() => {
@@ -113,7 +113,7 @@ const FitBoundsOnLoad = ({ bounds }: { bounds?: LatLngBoundsExpression }) => {
   });
 
   return null;
-};
+}; */
 
 const LazyMap = ({
   center,
@@ -207,6 +207,10 @@ const LazyMap = ({
       ref={(map) => {
         mapRef.current = map;
         if (map) {
+          map.whenReady(() => {
+            console.log("map ready");
+            if (bounds) map.fitBounds(bounds);
+          });
           requestAnimationFrame(() => map.invalidateSize());
           setTimeout(() => map.invalidateSize(), 150);
         }
@@ -240,7 +244,6 @@ const LazyMap = ({
           fullscreenControlPosition={fullscreenControlPosition}
           bounds={bounds}
         />
-        <FitBoundsOnLoad bounds={bounds} />
         <ClickHandler onDblClick={onDblClick} dragging={dragging} />
         {geojson && <GeoJSON data={geojson} onEachFeature={handleEachFeature} />}
         {children}
