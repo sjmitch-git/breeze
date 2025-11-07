@@ -84,12 +84,26 @@ export const Default: Story = {
       ],
     },
     title: "Product Sales by Category",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     border: false,
     aspect: "portrait",
   },
   argTypes: {
     data: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
       table: {
         disable: true,
       },
@@ -137,7 +151,11 @@ export const HalfDoughnut: Story = {
       ],
     },
     title: "Overall Possession",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     aspect: "landscape",
     border: true,
     options: {
@@ -175,7 +193,11 @@ export const HalfDoughnutInline: Story = {
       ],
     },
     title: "Overall Possession",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "left",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     aspect: "auto",
     border: true,
     options: {

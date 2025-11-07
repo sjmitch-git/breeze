@@ -99,7 +99,11 @@ export const Default: Story = {
       ],
     },
     title: "Sales Distribution by Product Category",
+    titleColor: "#a7a7a7",
+    titleFontSize: 16,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     aspect: "portrait",
     gridColor: "#a7a7a7",
     options: {
@@ -127,6 +131,16 @@ export const Default: Story = {
   },
   argTypes: {
     data: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
       table: {
         disable: true,
       },

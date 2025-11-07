@@ -81,7 +81,7 @@ export const Default: Story = {
   name: "Single Line",
   args: {
     data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
       datasets: [
         {
           label: "Sales for 2023 GBP)",
@@ -92,6 +92,8 @@ export const Default: Story = {
       ],
     },
     title: "Monthly Sales Data for 2023",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     gridColor: "#a7a7a7",
     aspect: "square",
     options: {
@@ -108,12 +110,32 @@ export const Default: Story = {
         disable: true,
       },
     },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
+      table: {
+        disable: true,
+      },
+    },
     options: {
       table: {
         disable: true,
       },
     },
     legendposition: {
+      table: {
+        disable: true,
+      },
+    },
+    legendColor: {
+      table: {
+        disable: true,
+      },
+    },
+    legendFontSize: {
       table: {
         disable: true,
       },
@@ -129,7 +151,7 @@ export const Default: Story = {
 export const MultiLine: Story = {
   args: {
     data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
       datasets: [
         {
           label: "2019 (GBP)",
@@ -164,7 +186,11 @@ export const MultiLine: Story = {
       ],
     },
     title: "Monthly Sales (2019-2023)",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     gridColor: "#a7a7a7",
     aspect: "portrait",
   },
@@ -172,6 +198,16 @@ export const MultiLine: Story = {
     ...Default.argTypes,
     legendposition: {
       options: ["top", "bottom"],
+    },
+    legendColor: {
+      table: {
+        disable: false,
+      },
+    },
+    legendFontSize: {
+      table: {
+        disable: false,
+      },
     },
   },
 };

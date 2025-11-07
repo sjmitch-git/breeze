@@ -98,7 +98,11 @@ export const Default: Story = {
       ],
     },
     title: "Height vs Weight Distribution",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     gridColor: "#a7a7a7",
     aspect: "portrait",
     options: {
@@ -132,6 +136,16 @@ export const Default: Story = {
   },
   argTypes: {
     data: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
       table: {
         disable: true,
       },
@@ -186,6 +200,8 @@ export const NegativeCorrelation: Story = {
       ],
     },
     title: "Age of Car vs Price",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
     gridColor: "#a7a7a7",
     options: {

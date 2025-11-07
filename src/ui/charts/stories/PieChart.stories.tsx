@@ -82,7 +82,11 @@ export const Default: Story = {
       ],
     },
     title: "Product Sales by Category",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     aspect: "portrait",
     border: false,
   },
@@ -98,6 +102,16 @@ export const Default: Story = {
       },
     },
     aspect: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
       table: {
         disable: true,
       },
@@ -134,8 +148,13 @@ export const HalfPie: Story = {
       ],
     },
     title: "Ball Possession",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     aspect: "landscape",
+    border: false,
     options: {
       rotation: -90,
       circumference: 180,

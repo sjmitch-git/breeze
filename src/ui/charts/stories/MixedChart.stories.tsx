@@ -102,12 +102,26 @@ export const Default: Story = {
       labels: ["January", "February", "March", "April", "May", "June", "July", "August"],
     },
     title: "Monthly Sales Data (GBP)",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 15,
     gridColor: "#a7a7a7",
     aspect: "portrait",
   },
   argTypes: {
     data: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
       table: {
         disable: true,
       },

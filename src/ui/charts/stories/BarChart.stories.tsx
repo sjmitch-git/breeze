@@ -84,7 +84,11 @@ export const Default: Story = {
       ],
     },
     title: "Weekly Temperature Ranges",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 16,
     layout: "vertical",
     gridColor: "#a7a7a7",
     aspect: "portrait",
@@ -113,6 +117,16 @@ export const Default: Story = {
     legendposition: {
       options: ["top", "bottom"],
     },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 
@@ -136,7 +150,11 @@ export const HorizontalBars: Story = {
       ],
     },
     title: "Weekly Temperature Ranges",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 16,
     layout: "horizontal",
     gridColor: "#a7a7a7",
     aspect: "portrait",
@@ -172,7 +190,11 @@ export const StackedCompound: Story = {
       ],
     },
     title: "Test Scores",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 16,
     gridColor: "#a7a7a7",
     aspect: "portrait",
     layout: "vertical",
@@ -216,6 +238,16 @@ export const StackedCompound: Story = {
     legendposition: {
       options: ["top", "bottom"],
     },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 
@@ -240,6 +272,10 @@ export const FloatingBars: Story = {
       ],
     },
     title: "Monthly Temperature Ranges",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
+    legendposition: "bottom",
+    layout: "vertical",
     gridColor: "#a7a7a7",
     aspect: "square",
     options: {
@@ -292,7 +328,37 @@ export const FloatingBars: Story = {
         disable: true,
       },
     },
+    legendcolor: {
+      table: {
+        disable: true,
+      },
+    },
+    legendfontsize: {
+      table: {
+        disable: true,
+      },
+    },
     aspect: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
+      table: {
+        disable: true,
+      },
+    },
+    legendColor: {
+      table: {
+        disable: true,
+      },
+    },
+    legendFontSize: {
       table: {
         disable: true,
       },
@@ -322,7 +388,11 @@ export const PercentageBar: Story = {
       ],
     },
     title: "Overall Possession",
+    titleColor: "#a7a7a7",
+    titleFontSize: 18,
     legendposition: "bottom",
+    legendColor: "#a7a7a7",
+    legendFontSize: 16,
     layout: "horizontal",
     style: { height: 92 },
     aspect: "auto",
@@ -393,6 +463,16 @@ export const PercentageBar: Story = {
       },
     },
     layout: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
       table: {
         disable: true,
       },
