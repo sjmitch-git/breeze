@@ -13,7 +13,8 @@
     "module": "CommonJS",
     "target": "ES5",
     "esModuleInterop": true,
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "isolatedModules": false
   },
   "include": ["src/ui/**/*.ts", "src/ui/**/*.tsx"],
   "exclude": ["node_modules", "src/ui/**/stories/**/*"]
