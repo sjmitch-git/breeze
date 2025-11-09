@@ -36,7 +36,7 @@ Live demo: https://breezeui.site
     - [Media](#media)
     - [Typography](#typography)
     - [Data Visualization](#data-visualization)
-    - [Time](#time)
+    - [DateTime](#datetime)
     - [Maps](#maps)
     - [Social Media](#social-media)
   - [Author](#author)
@@ -437,9 +437,8 @@ export default App;
 - <a href='https://breezeui.site/?path=/docs/media-hero--docs'>Hero</a>
 - <a href='https://breezeui.site/?path=/docs/media-icon--docs'>Icon</a>
 - <a href='https://breezeui.site/?path=/docs/media-modal--docs'>Modal</a>
-- <a href='https://breezeui.site/?path=/docs/media-placeholder--docs'>PlaceHolder</a>
-- <a href='https://breezeui.site/?path=/docs/media-twitter-embed--docs'>Twitter Embed</a>
-- <a href='https://breezeui.site/?path=/docs/media-twitter-embed--docs'>Twitter Timeline</a>
+- <a href='https://breezeui.site/?path=/docs/media-image-placeholder--docs'>Image PlaceHolder</a>
+- <a href='https://breezeui.site/?path=/docs/media-x-embed--docs'>X Embed</a>
 - <a href='https://breezeui.site/?path=/docs/media-video--docs'>Video</a>
 - <a href='https://breezeui.site/?path=/docs/media-video-player--docs'>Video Player</a>
 - <a href='https://breezeui.site/?path=/docs/media-youtube-embed--docs'>YouTube Embed</a>
@@ -467,9 +466,9 @@ export default App;
   Chart</a>
 - <a href='https://breezeui.site/?path=/docs/data-visualization-stat-bar--docs'>Stat Bar</a>
 
-### Time
+### DateTime
 
-- <a href='https://breezeui.site/?path=/docs/time-clock--docs'>Clock</a>
+- <a href='https://breezeui.site/?path=/docs/datetime-clock--docs'>Clock</a>
 
 ### Maps
 
