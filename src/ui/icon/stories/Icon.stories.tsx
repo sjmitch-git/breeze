@@ -32,7 +32,7 @@ through various props like \`iconName\`, \`iconId\`, \`iconSize\`, and \`iconCol
 
 ### Import:
 \`\`\`jsx
-import { Icon } from '@smitch/fluid-ui';
+import { Icon } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage

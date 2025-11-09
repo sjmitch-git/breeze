@@ -19,7 +19,7 @@ It uses the current page title as the subject and includes your custom text and 
 
 ### Import:
 \`\`\`jsx
-import { EmailButton } from '@smitch/fluid-ui';
+import { EmailButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

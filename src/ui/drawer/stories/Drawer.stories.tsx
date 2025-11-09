@@ -23,7 +23,7 @@ The **Drawer** component provides a convenient sliding panel to display addition
 
 ### Import:
 \`\`\`jsx
-import { Drawer } from '@smitch/fluid-ui';
+import { Drawer } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

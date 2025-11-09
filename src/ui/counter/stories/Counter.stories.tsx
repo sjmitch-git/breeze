@@ -27,7 +27,7 @@ The **Counter** component is used for numeric input, allowing users to increment
 
 ### Import:
 \`\`\`jsx
-import { Counter } from '@smitch/fluid-ui';
+import { Counter } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

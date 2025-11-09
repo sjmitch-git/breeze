@@ -57,7 +57,7 @@ The **Dropdown** component is a versatile menu system that enables easy access t
 
 ### Import:
 \`\`\`jsx
-import { Dropdown } from '@smitch/fluid-ui';
+import { Dropdown } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

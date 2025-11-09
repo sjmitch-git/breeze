@@ -18,7 +18,7 @@ It opens the Facebook share dialog with the current page URL.
 
 ### Import:
 \`\`\`jsx
-import { FacebookButton } from '@smitch/fluid-ui';
+import { FacebookButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

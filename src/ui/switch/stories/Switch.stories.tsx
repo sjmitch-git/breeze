@@ -28,7 +28,7 @@ The **Switch** component is a customizable toggle switch that allows users to sw
 
 ### Import:
 \`\`\`jsx
-import { Switch } from '@smitch/fluid-ui';
+import { Switch } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

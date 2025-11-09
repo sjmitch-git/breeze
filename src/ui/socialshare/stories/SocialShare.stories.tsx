@@ -36,7 +36,7 @@ You can control which buttons appear, their order, shape, and spacing.
 
 ### Import:
 \`\`\`jsx
-import { SocialShare } from '@smitch/fluid-ui';
+import { SocialShare } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

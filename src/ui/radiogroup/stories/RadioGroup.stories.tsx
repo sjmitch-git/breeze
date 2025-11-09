@@ -25,7 +25,7 @@ The **RadioGroup** component allows users to select one option from a group of c
 
 ### Import:
 \`\`\`jsx
-import { RadioGroup } from '@smitch/fluid-ui';
+import { RadioGroup } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

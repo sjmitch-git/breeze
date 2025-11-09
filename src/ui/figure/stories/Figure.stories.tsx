@@ -38,7 +38,7 @@ The **Figure** component displays a single media item with a caption, customizab
 
 ### Import:
 \`\`\`jsx
-import { Figure } from '@smitch/fluid-ui';
+import { Figure } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

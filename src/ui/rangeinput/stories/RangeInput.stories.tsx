@@ -27,7 +27,7 @@ The **RangeInput** component is a slider-style input that lets users select a va
 
 ### Import:
 \`\`\`jsx
-import { RangeInput } from '@smitch/fluid-ui';
+import { RangeInput } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

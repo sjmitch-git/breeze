@@ -26,7 +26,7 @@ The **TextArea** component provides a multi-line input field for users to enter 
 
 ### Import:
 \`\`\`jsx
-import { TextArea } from '@smitch/fluid-ui';
+import { TextArea } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

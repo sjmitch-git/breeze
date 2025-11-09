@@ -19,7 +19,7 @@ It opens the X share dialog with your custom text and the current page URL.
 
 ### Import:
 \`\`\`jsx
-import { XButton } from '@smitch/fluid-ui';
+import { XButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

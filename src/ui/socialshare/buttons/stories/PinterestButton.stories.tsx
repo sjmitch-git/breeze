@@ -19,7 +19,7 @@ It opens the Pinterest share dialog with your custom description and the current
 
 ### Import:
 \`\`\`jsx
-import { PinterestButton } from '@smitch/fluid-ui';
+import { PinterestButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

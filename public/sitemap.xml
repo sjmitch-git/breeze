@@ -124,13 +124,10 @@
         <loc>https://breezeui.site/?path=/docs/media-modal--docs</loc>
     </url>
     <url>
-        <loc>https://breezeui.site/?path=/docs/media-placeholder--docs</loc>
+        <loc>https://breezeui.site/?path=/docs/media-image-placeholder--docs</loc>
     </url>
     <url>
-        <loc>https://breezeui.site/?path=/docs/media-twitter-embed--docs</loc>
-    </url>
-    <url>
-        <loc>https://breezeui.site/?path=/docs/media-twitter-embed--docs#twitter-timeline</loc>
+        <loc>https://breezeui.site/?path=/docs/media-x-embed--docss</loc>
     </url>
     <url>
         <loc>https://breezeui.site/?path=/docs/media-video--docs</loc>
@@ -182,5 +179,11 @@
     </url>
      <url>
         <loc>https://breezeui.site/?path=/docs/map--docs</loc>
+    </url>
+    <url>
+        <loc>https://breezeui.site/?path=/docs/datetime-clock--docs</loc>
+    </url>
+    <url>
+        <loc>https://breezeui.site/?path=/docs/social-socialshare--docs</loc>
     </url>
 </urlset>

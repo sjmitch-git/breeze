@@ -26,7 +26,7 @@ The **Gallery** component displays a collection of media items in a flexible lay
 
 ### Import:
 \`\`\`jsx
-import { Gallery } from '@smitch/fluid-ui';
+import { Gallery } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

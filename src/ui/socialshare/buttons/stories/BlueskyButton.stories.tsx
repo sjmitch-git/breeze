@@ -18,7 +18,7 @@ It opens the Bluesky compose dialog with your custom text and the current page U
 
 ### Import:
 \`\`\`jsx
-import { BlueskyButton } from '@smitch/fluid-ui';
+import { BlueskyButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

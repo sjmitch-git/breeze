@@ -26,7 +26,7 @@ The **Checkbox** component allows users to toggle selections on and off, making 
 
 ### Import:
 \`\`\`jsx
-import { Checkbox } from '@smitch/fluid-ui';
+import { Checkbox } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

@@ -29,7 +29,7 @@ The **Clock** component displays an analog clock that can show the current time 
 
 ### Import:
 \`\`\`jsx
-import { Clock } from '@smitch/fluid-ui';
+import { Clock } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

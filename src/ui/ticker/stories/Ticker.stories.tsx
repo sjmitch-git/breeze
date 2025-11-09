@@ -19,7 +19,7 @@ The **Ticker** component is a scrolling ticker that displays a list of items. It
 
 ### Import:
 \`\`\`jsx
-import { Ticker } from '@smitch/fluid-ui';
+import { Ticker } from '@smitch/breeze';
 \`\`\`
 
 ### Usage Example:

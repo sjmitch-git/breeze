@@ -19,7 +19,7 @@ It opens the WhatsApp share dialog with your custom text and the current page UR
 
 ### Import:
 \`\`\`jsx
-import { WhatsAppButton } from '@smitch/fluid-ui';
+import { WhatsAppButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

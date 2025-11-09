@@ -19,7 +19,7 @@ It opens the Slack share dialog with your custom text and the current page URL.
 
 ### Import:
 \`\`\`jsx
-import { SlackButton } from '@smitch/fluid-ui';
+import { SlackButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

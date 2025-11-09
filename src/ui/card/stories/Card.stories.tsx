@@ -42,7 +42,7 @@ The **Card** component offers a flexible and composable structure for displaying
 
 ### Import:
 \`\`\`jsx
-import { Card, CardHeader, CardBody, CardImage, CardFooter } from '@smitch/fluid-ui';
+import { Card, CardHeader, CardBody, CardImage, CardFooter } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

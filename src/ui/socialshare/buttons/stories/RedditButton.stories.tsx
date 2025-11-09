@@ -19,7 +19,7 @@ It opens the Reddit share dialog with your custom title and the current page URL
 
 ### Import:
 \`\`\`jsx
-import { PinterestButton } from '@smitch/fluid-ui';
+import { PinterestButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

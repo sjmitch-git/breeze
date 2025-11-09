@@ -57,7 +57,7 @@ The **Carousel** component provides a flexible and visually appealing way to dis
 
 ### Import:
 \`\`\`jsx
-import { Carousel } from '@smitch/fluid-ui';
+import { Carousel } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

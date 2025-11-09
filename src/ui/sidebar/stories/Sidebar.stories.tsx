@@ -23,7 +23,7 @@ The **Sidebar** component is a sliding panel that appears from the side of the s
 
 ### Import:
 \`\`\`jsx
-import { Sidebar } from '@smitch/fluid-ui';
+import { Sidebar } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

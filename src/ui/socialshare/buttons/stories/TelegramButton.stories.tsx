@@ -19,7 +19,7 @@ It opens the Telegram share dialog with your custom text and the current page UR
 
 ### Import:
 \`\`\`jsx
-import { SlackButton } from '@smitch/fluid-ui';
+import { SlackButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

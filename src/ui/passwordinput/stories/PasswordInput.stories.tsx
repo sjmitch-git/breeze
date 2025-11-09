@@ -28,7 +28,7 @@ The **PasswordInput** component provides a user-friendly input field specificall
 
 ### Import:
 \`\`\`jsx
-import { PasswordInput } from '@smitch/fluid-ui';
+import { PasswordInput } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

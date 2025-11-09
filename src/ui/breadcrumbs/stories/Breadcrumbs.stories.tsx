@@ -31,7 +31,7 @@ The **Breadcrumbs** component provides a navigational aid, allowing users to kee
 
 ### Import:
 \`\`\`jsx
-import { Breadcrumbs } from '@smitch/fluid-ui';
+import { Breadcrumbs } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

@@ -26,7 +26,7 @@ The **Input** component is a versatile form element designed for various input t
 
 ### Import:
 \`\`\`jsx
-import { Input } from '@smitch/fluid-ui';
+import { Input } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

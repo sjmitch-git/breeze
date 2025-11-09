@@ -30,7 +30,7 @@ The **Accordion** component provides a collapsible section interface, useful for
 
 ### Import:
 \`\`\`jsx
-import { Accordion, AccordionItem } from '@smitch/fluid-ui';
+import { Accordion, AccordionItem } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

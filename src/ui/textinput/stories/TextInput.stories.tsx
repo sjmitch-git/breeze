@@ -26,7 +26,7 @@ The **TextInput** component is a versatile input field designed for various text
 
 ### Import:
 \`\`\`jsx
-import { TextInput } from '@smitch/fluid-ui';
+import { TextInput } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

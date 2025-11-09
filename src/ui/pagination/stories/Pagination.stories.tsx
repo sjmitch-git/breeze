@@ -28,7 +28,7 @@ The **Pagination** component allows users to navigate through paginated content 
 
 ### Import:
 \`\`\`jsx
-import { Pagination } from '@smitch/fluid-ui';
+import { Pagination } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

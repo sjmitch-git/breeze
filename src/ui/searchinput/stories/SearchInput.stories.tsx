@@ -25,7 +25,7 @@ The **SearchInput** component is a versatile input field designed for search fun
 
 ### Import:
 \`\`\`jsx
-import { SearchInput } from '@smitch/fluid-ui';
+import { SearchInput } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

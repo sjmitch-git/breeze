@@ -49,7 +49,7 @@ The **Select** component provides a dropdown menu for choosing from a list of op
 
 ### Import:
 \`\`\`jsx
-import { Select } from '@smitch/fluid-ui';
+import { Select } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

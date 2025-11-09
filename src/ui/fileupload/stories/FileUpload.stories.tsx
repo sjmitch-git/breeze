@@ -27,7 +27,7 @@ The **FileUpload** component enables users to upload files through an input inte
 
 ### Import:
 \`\`\`jsx
-import { FileUpload } from '@smitch/fluid-ui';
+import { FileUpload } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

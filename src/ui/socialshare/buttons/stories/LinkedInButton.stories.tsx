@@ -18,7 +18,7 @@ It opens the LinkedIn share dialog with the current page URL.
 
 ### Import:
 \`\`\`jsx
-import { LinkedInButton } from '@smitch/fluid-ui';
+import { LinkedInButton } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:

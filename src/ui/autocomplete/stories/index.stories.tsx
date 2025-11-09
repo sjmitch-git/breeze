@@ -53,7 +53,7 @@ The **Autocomplete** component provides a searchable dropdown to help users find
 
 ### Import:
 \`\`\`jsx
-import { Autocomplete } from '@smitch/fluid-ui';
+import { Autocomplete } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:
