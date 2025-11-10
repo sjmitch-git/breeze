@@ -3,23 +3,19 @@
 [![npm version](https://img.shields.io/npm/v/@smitch/breeze?color=cb0000&logo=npm)](https://www.npmjs.com/package/@smitch/breeze)
 [![npm downloads](https://img.shields.io/npm/dm/@smitch/breeze?color=success)](https://www.npmjs.com/package/@smitch/breeze)
 
-A Next.js/React UI component library.
+A Next.js/React UI component library built with React 19, Next.js 15, and Tailwind CSS 3.
 
-Live demo: https://breezeui.site
+Live demo: [https://breezeui.site](https://breezeui.site)
 
 - [Breeze UI](#breeze-ui)
   - [Overview](#overview)
   - [Features](#features)
   - [Getting Started](#getting-started)
-    - [1. Install Next.js and React](#1-install-nextjs-and-react)
+    - [1. Installation](#1-installation)
     - [2. Configure Tailwind 3](#2-configure-tailwind-3)
-      - [2. Configure `tailwind.config.js`](#2-configure-tailwindconfigjs)
-  - [Installation](#installation)
-  - [Compatibility](#compatibility)
-    - [Supported stacks \& compatibility matrix](#supported-stacks--compatibility-matrix)
-    - [Node / environment](#node--environment)
-    - [Troubleshooting](#troubleshooting)
-  - [Peer dependencies](#peer-dependencies)
+    - [1. Generate Tailwind Config Files](#1-generate-tailwind-config-files)
+    - [2. Configure `tailwind.config.js`](#2-configure-tailwindconfigjs)
+    - [3. Add Tailwind Directives to CSS](#3-add-tailwind-directives-to-css)
   - [Basic Usage](#basic-usage)
   - [Charts Usage](#charts-usage)
     - [Chart Usage Example](#chart-usage-example)
@@ -49,55 +45,49 @@ library is designed to streamline the development process and ensure consistency
 ## Features
 
 - Reusable UI components
-- Charts
-- Maps
-- Built with React 19, Next.js 15 and TailwindCSS 3
+- Charts (Bar, Line, Pie, etc.)
+- Maps (Markers, Polygons, etc.)
+- Built with React 19, Next.js 15, and Tailwind CSS 3
+- Dark mode support via Tailwind's `selector` strategy
 
 ## Getting Started
 
-To use Breeze UI in your Next.js/React project, follow these steps:
+To use Breeze UI in your Next.js/React project, follow these steps. Note: Tailwind CSS 3 is a peer
+dependency—install it if not already present (`npm install -D tailwindcss postcss autoprefixer`).
 
-### 1. Install Next.js and React
-
-If you haven't set up your Next.js project yet, start by initializing it:
+### 1. Installation
 
 ```bash
-npx create-next-app@latest
+npm install @smitch/breeze
 ```
-
-When prompted:
-
-- **Use TypeScript?**: Select **Yes** to enable TypeScript in your project.
-- **Use TailwindCSS?**: Select **Yes** to install and configure TailwindCSS automatically.
-
-Next.js will then generate the necessary configuration for both **TypeScript** and **TailwindCSS**,
-including `tsconfig.json`, `tailwind.config.js`, and PostCSS setup.
 
 ### 2. Configure Tailwind 3
 
-To ensure that **Breeze UI** works correctly, you need to configure **TailwindCSS**. Follow the
-steps below:
+To ensure Breeze UI works correctly, configure Tailwind CSS v3. All releases use v3.x.
 
-Note: All current Breeze releases utilize TailwindCSS v3.
+### 1. Generate Tailwind Config Files
 
-#### 2. Configure `tailwind.config.js`
+```js
+npx tailwindcss init -p
+```
 
-Update your `tailwind.config.js` file to match the configuration below:
+This creates `tailwind.config.js` and `postcss.config.js` (pre-filled with Tailwind + Autoprefixer).
+
+### 2. Configure `tailwind.config.js`
+
+Update your `tailwind.config.js` to include Breeze's content path and theme.
 
 ```js
 import type { Config } from "tailwindcss";
-/* Import colors if using Tailwind's color palette */
 import colors from "tailwindcss/colors";
 
 const config: Config = {
   /* The selector strategy replaced the class strategy in Tailwind CSS v3.4.1.*/
   darkMode: "selector",
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     /* IMPORTANT: Add this line: */
-    "./node_modules/@smitch/Breeze/**/*.js",
+    "./node_modules/@smitch/breeze/**/*.js",
   ],
   theme: {
     extend: {
@@ -161,106 +151,36 @@ const config: Config = {
 export default config;
 ```
 
-## Installation
+### 3. Add Tailwind Directives to CSS
 
-```bash
-npm install @smitch/breeze
-```
+Add to your global CSS file (e.g., `globals.css` in App Router):
 
-## Compatibility
-
-### Supported stacks & compatibility matrix
-
-Use the table below to pick the Breeze major line that matches your app's React / Next.js and
-Tailwind versions. This helps avoid peer dependency conflicts.
-
-- Breeze v4.x (current):
-
-  - React: 19.x
-  - Next.js: 15.x
-  - Tailwind: 3.x
-  - Install: `npm install @smitch/breeze`
-
-- Breeze v3.x:
-  - React: 18.x
-  - Next.js: 14.x (and other releases built on React 18)
-  - Tailwind: 3.x
-  - Install: `npm install @smitch/Breeze@^3`
-
-### Node / environment
-
-- Recommended Node: use an LTS release (Node 18/20+ recommended depending on your Next version).
-
-### Troubleshooting
-
-- If a feature (charts, maps) fails because a peer package is missing, install the optional peers
-  indicated in the Peer dependencies section (e.g., `chart.js`, `react-chartjs-2`, `leaflet`).
-
-## Peer dependencies
-
-Breeze is a component library and expects the host app to provide framework/runtime dependencies.
-Below are the packages you should have installed in your project when using `@smitch/Breeze`.
-
-Required (framework)
-
-```bash
-npm install react react-dom next
-```
-
-Optional (feature-specific — install only if you use the feature)
-
-Charts (optional)
-
-If you use the chart components, install the Chart.js runtime and the React wrapper:
-
-```bash
-npm install chart.js react-chartjs-2
-```
-
-Maps (optional — Leaflet)
-
-If you use the map components, install Leaflet and React Leaflet:
-
-```bash
-npm install leaflet react-leaflet
-```
-
-TypeScript notes:
-
-- For some setups you may want `@types/leaflet` (install if your build complains about Leaflet
-  types):
-
-```bash
-npm install -D @types/leaflet
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
 ## Basic Usage
 
-Now, you can import and use any Breeze UI [component](#components) in your Next.js project:
+Import and use [components](#components):
 
 ```jsx
-import { Button } from "@smitch/Breeze";
+import { Button } from "@smitch/breeze";
 
 const App = () => <Button>Click me</Button>;
 
 export default App;
 ```
 
+For charts/maps, see below.
+
 ## Charts Usage
 
-Charts available include:
+Charts include: BarChart, BubbleChart, LineChart, PieChart, DoughnutChart, ScatterChart, RadarChart,
+PolarAreaChart, MixedChart.
 
-- BarChart
-- BubbleChart
-- LineChart
-- PieChart
-- DoughnutChart
-- ScatterChart
-- RadarChart
-- PolarAreaChart
-- MixedChart
-
-Charts require Chart.js and the React wrapper:
+Install deps:
 
 ```bash
 npm install chart.js react-chartjs-2
@@ -269,7 +189,7 @@ npm install chart.js react-chartjs-2
 ### Chart Usage Example
 
 ```jsx
-import { BarChart } from "@smitch/Breeze/charts";
+import { BarChart } from "@smitch/breeze/charts";
 
 const App = () => {
   return (
@@ -287,8 +207,7 @@ const App = () => {
                     data: [22, 25, 20, 18, 24],
                     backgroundColor: 'rgba(255, 99, 132, 0.6)',
                     borderWidth: 0,
-                },
-                ...
+                }
             ],
             labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
         }}
@@ -303,15 +222,9 @@ export default App;
 
 ## Map Usage
 
-Map options include:
+Map components: MapMarker, MapCircle, MapPolygon, MapLine, MapRectangle.
 
-- MapMarker
-- MapCircle
-- MapPolygon
-- MapLine
-- MapRectangle
-
-Install Leaflet and React Leaflet (and leaflet.fullscreen if fullscreen control required):
+Install deps:
 
 ```bash
 npm install leaflet react-leaflet leaflet.fullscreen
@@ -326,7 +239,7 @@ npm install -D @types/leaflet @types/leaflet.fullscreen
 #### Static Map
 
 ```jsx
-import { Map } from "@smitch/Breeze/map";
+import { Map } from "@smitch/breeze/map";
 
 const App = () => {
   return (
@@ -348,7 +261,7 @@ export default App;
 #### Map with marker
 
 ```jsx
-import { Map, MapMarker } from "@smitch/Breeze/map";
+import { Map, MapMarker } from "@smitch/breeze/map";
 
 const App = () => {
   return (
@@ -392,7 +305,7 @@ export default App;
 - <a href='https://breezeui.site/?path=/docs/inputs-file-upload--docs'>File Upload</a>
 - <a href='https://breezeui.site/?path=/docs/inputs-input--docs'>Input</a>
 - <a href='https://breezeui.site/?path=/docs/inputs-password-input--docs'>Password Input</a>
-- <a href='https://breezeui.site/?path=/docs/inputs-radiog-roup--docs'>Radio Group</a>
+- <a href='https://breezeui.site/?path=/docs/inputs-radio-group--docs'>Radio Group</a>
 - <a href='https://breezeui.site/?path=/docs/inputs-range-input--docs'>Range Input</a>
 - <a href='https://breezeui.site/?path=/docs/inputs-search-input--docs'>Search Input</a>
 - <a href='https://breezeui.site/?path=/docs/inputs-select--docs'>Select</a>
