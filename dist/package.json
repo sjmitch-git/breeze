@@ -1,6 +1,6 @@
 {
   "name": "@smitch/breeze",
-  "version": "2.2.6",
+  "version": "2.2.7",
   "description": "A lightweight, Tailwind-powered React/Next.js UI component library.",
   "main": "lib/index.js",
   "keywords": [
@@ -20,7 +20,10 @@
     ".npmignore"
   ],
   "dependencies": {
-    "@smitch/js-lib": "^0.3.22"
+    "@smitch/js-lib": "^0.3.22",
+    "postcss-import": "^15.1.0",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20"
   },
   "peerDependencies": {
     "react": ">=19",
@@ -47,10 +50,7 @@
     }
   },
   "devDependencies": {
-    "@types/prismjs": "^1.26.5",
-    "postcss-import": "^15.1.0",
-    "postcss": "^8.4.47",
-    "autoprefixer": "^10.4.20"
+    "@types/prismjs": "^1.26.5"
   },
   "types": "index.d.ts",
   "typings": "index.d.ts",
