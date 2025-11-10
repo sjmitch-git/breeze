@@ -15,7 +15,8 @@ Live demo: [https://breezeui.site](https://breezeui.site)
     - [2. Configure Tailwind 3](#2-configure-tailwind-3)
       - [1. Generate Tailwind Config Files](#1-generate-tailwind-config-files)
       - [2. Configure `tailwind.config.js`](#2-configure-tailwindconfigjs)
-      - [3. Add Tailwind Directives to CSS](#3-add-tailwind-directives-to-css)
+      - [3. Configure `postcss.config.js`](#3-configure-postcssconfigjs)
+      - [4. Add Tailwind Directives to CSS](#4-add-tailwind-directives-to-css)
   - [Basic Usage](#basic-usage)
   - [Charts Usage](#charts-usage)
     - [Chart Usage Example](#chart-usage-example)
@@ -78,11 +79,10 @@ This creates `tailwind.config.js` and `postcss.config.js` (pre-filled with Tailw
 Update your `tailwind.config.js` to include Breeze's content path and theme.
 
 ```js
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
 import colors from "tailwindcss/colors";
 
-const config: Config = {
-  /* The selector strategy replaced the class strategy in Tailwind CSS v3.4.1.*/
+module.exports = {
   darkMode: "selector",
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -147,10 +147,22 @@ const config: Config = {
     }),
   ],
 };
-export default config;
 ```
 
-### 3. Add Tailwind Directives to CSS
+### 3. Configure `postcss.config.js`
+
+```javascript
+module.exports = {
+  plugins: {
+    "postcss-import": {},
+    "tailwindcss/nesting": {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+### 4. Add Tailwind Directives to CSS
 
 Add to your global CSS file (e.g., `globals.css` in App Router):
 

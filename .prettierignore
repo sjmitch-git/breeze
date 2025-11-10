@@ -1,0 +1,4 @@
+# .prettierignore
+README.md
+*.md
+*.mdx

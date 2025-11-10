@@ -16,7 +16,8 @@ A Next.js/React UI component library built with React 19, Next.js 15, and Tailwi
     - [2. Configure Tailwind 3](#2-configure-tailwind-3)
       - [1. Generate Tailwind Config Files](#1-generate-tailwind-config-files)
       - [2. Configure `tailwind.config.js`](#2-configure-tailwindconfigjs)
-      - [3. Add Tailwind Directives to CSS](#3-add-tailwind-directives-to-css)
+      - [3. Configure `postcss.config.js`](#3-configure-postcssconfigjs)
+      - [4. Add Tailwind Directives to CSS](#4-add-tailwind-directives-to-css)
   - [Basic Usage](#basic-usage)
   - [Charts Usage](#charts-usage)
     - [Chart Usage Example](#chart-usage-example)
@@ -151,7 +152,20 @@ const config: Config = {
 export default config;
 ```
 
-### 3. Add Tailwind Directives to CSS
+### 3. Configure `postcss.config.js`
+
+```javascript
+module.exports = {
+  plugins: {
+    "postcss-import": {},
+    "tailwindcss/nesting": {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+### 4. Add Tailwind Directives to CSS
 
 Add to your global CSS file (e.g., `globals.css` in App Router):
 
