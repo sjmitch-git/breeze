@@ -76,29 +76,31 @@ import { RangeInput } from '@smitch/breeze';
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = (args: RangeInputProps) => {
-  const handleChange = (value: number) => {
-    console.log("Range Input value: ", value);
-  };
+export const Default: Story = {
+  render: (args: RangeInputProps) => {
+    const handleChange = (value: number) => {
+      console.log("Range Input value: ", value);
+    };
 
-  return <RangeInput {...args} onChange={handleChange} />;
-};
+    return <RangeInput {...args} onChange={handleChange} />;
+  },
 
-Default.args = {
-  label: "Range",
-  labelIsBold: true,
-  layout: "col",
-  size: "md",
-  min: 0,
-  max: 20,
-  step: "1",
-  defaultValue: 0,
-  rangeActive: "#ffa500",
-  rangeBackground: "#cccccc",
-  thumbnailColor: "#ffa500",
-  thumbnailShape: "circle",
-  rounded: true,
-  title: "Current value:",
-  hint: true,
-  required: false,
+  args: {
+    label: "Range",
+    labelIsBold: true,
+    layout: "col",
+    size: "md",
+    min: 0,
+    max: 20,
+    step: "1",
+    defaultValue: 0,
+    rangeActive: "#ffa500",
+    rangeBackground: "#cccccc",
+    thumbnailColor: "#ffa500",
+    thumbnailShape: "circle",
+    rounded: true,
+    title: "Current value:",
+    hint: true,
+    required: false,
+  },
 };

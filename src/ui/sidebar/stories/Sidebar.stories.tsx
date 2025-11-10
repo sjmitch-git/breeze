@@ -73,30 +73,32 @@ import { Sidebar } from '@smitch/breeze';
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = (args: SidebarProps) => {
-  const [open, setOpen] = useState(args.open);
+export const Default: Story = {
+  render: (args: SidebarProps) => {
+    const [open, setOpen] = useState(args.open);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
-  return (
-    <>
-      <button
-        onClick={() => setOpen(!open)}
-        className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Open Sidebar
-      </button>
-      <Sidebar {...args} open={open} onClose={handleClose}>
-        <Tabs {...LoginRegister.args}>{LoginRegister.args?.children}</Tabs>
-      </Sidebar>
-    </>
-  );
-};
+    return (
+      <>
+        <button
+          onClick={() => setOpen(!open)}
+          className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Open Sidebar
+        </button>
+        <Sidebar {...args} open={open} onClose={handleClose}>
+          <Tabs {...LoginRegister.args}>{LoginRegister.args?.children}</Tabs>
+        </Sidebar>
+      </>
+    );
+  },
 
-Default.args = {
-  backdrop: true,
-  position: "right",
-  open: false,
+  args: {
+    backdrop: true,
+    position: "right",
+    open: false,
+  },
 };

@@ -94,7 +94,10 @@ export default meta;
 
 type Story = StoryObj<typeof Progress>;
 
-const ProgressComponent = (args: { totalSize: number; onDone?: () => void }) => {
+const ProgressComponent = (args: {
+  totalSize: number;
+  onDone?: () => void;
+}) => {
   const [downloadedSize, setDownloadedSize] = useState(0);
   const [isCancelled, setIsCancelled] = useState(false);
 
@@ -121,7 +124,9 @@ const ProgressComponent = (args: { totalSize: number; onDone?: () => void }) => 
     return () => clearInterval(interval);
   }, [args.totalSize, isCancelled]);
 
-  return <Progress {...args} downloadedSize={downloadedSize} onDone={handleDone} />;
+  return (
+    <Progress {...args} downloadedSize={downloadedSize} onDone={handleDone} />
+  );
 };
 
 export const SimpleProgress: Story = {
@@ -204,7 +209,11 @@ const ModalProgressComponent = (args: {
           onClose={handleClose}
         >
           <div className="pb-4 px-4">
-            <Progress {...args} downloadedSize={downloadedSize} onDone={handleOnDone} />
+            <Progress
+              {...args}
+              downloadedSize={downloadedSize}
+              onDone={handleOnDone}
+            />
           </div>
         </Dialog>
       )}

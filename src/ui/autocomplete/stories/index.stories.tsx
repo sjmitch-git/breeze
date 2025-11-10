@@ -24,7 +24,8 @@ const meta: Meta = {
     },
     onChange: {
       action: "changed",
-      description: "Callback function that triggers when the input value changes",
+      description:
+        "Callback function that triggers when the input value changes",
       table: {
         disable: true,
       },

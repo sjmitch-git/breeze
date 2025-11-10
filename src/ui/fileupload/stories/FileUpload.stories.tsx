@@ -68,7 +68,8 @@ import { FileUpload } from '@smitch/breeze';
       defaultValue: "Multiple",
     },
     icon: {
-      description: "Whether to show an icon instead of text in the upload button.",
+      description:
+        "Whether to show an icon instead of text in the upload button.",
       control: "boolean",
       defaultValue: true,
     },
@@ -104,47 +105,56 @@ import { FileUpload } from '@smitch/breeze';
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = (args: FileUploadProps) => {
-  const [files, setFiles] = useState<File[]>([]);
+export const Default: Story = {
+  render: (args: FileUploadProps) => {
+    const [files, setFiles] = useState<File[]>([]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newFiles = event.target.files ? Array.from(event.target.files) : [];
-    setFiles(newFiles);
-    console.log("Selected files:", newFiles);
-  };
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const newFiles = event.target.files ? Array.from(event.target.files) : [];
+      setFiles(newFiles);
+      console.log("Selected files:", newFiles);
+    };
 
-  const handleSetFiles = (newFiles: File[]) => {
-    console.log("Updated files:", newFiles);
-    setFiles(newFiles);
-  };
+    const handleSetFiles = (newFiles: File[]) => {
+      console.log("Updated files:", newFiles);
+      setFiles(newFiles);
+    };
 
-  return <FileUpload {...args} onChange={handleChange} setFiles={handleSetFiles} files={files} />;
-};
-
-Default.args = {
-  label: "Upload",
-  accept: "image/*",
-  showMultiple: true,
-  multipleLabel: "Multiple",
-  icon: true,
-  size: "md",
-  files: [],
-};
-
-Default.argTypes = {
-  onChange: {
-    table: {
-      disable: true,
-    },
+    return (
+      <FileUpload
+        {...args}
+        onChange={handleChange}
+        setFiles={handleSetFiles}
+        files={files}
+      />
+    );
   },
-  setFiles: {
-    table: {
-      disable: true,
-    },
+
+  args: {
+    label: "Upload",
+    accept: "image/*",
+    showMultiple: true,
+    multipleLabel: "Multiple",
+    icon: true,
+    size: "md",
+    files: [],
   },
-  files: {
-    table: {
-      disable: true,
+
+  argTypes: {
+    onChange: {
+      table: {
+        disable: true,
+      },
+    },
+    setFiles: {
+      table: {
+        disable: true,
+      },
+    },
+    files: {
+      table: {
+        disable: true,
+      },
     },
   },
 };

@@ -49,7 +49,8 @@ import { Pictogram } from '@smitch/fluid'
     },
     tally: {
       control: "object",
-      description: "Array of numbers representing how many icons to display for each label.",
+      description:
+        "Array of numbers representing how many icons to display for each label.",
     },
     icon: {
       control: "text",

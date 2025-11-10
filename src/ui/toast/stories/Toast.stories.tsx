@@ -70,43 +70,50 @@ return (
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = (args: ToastProps) => {
-  const [open, setOpen] = useState(args.open);
+export const Default: Story = {
+  render: (args: ToastProps) => {
+    const [open, setOpen] = useState(args.open);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
-  const handleClick = () => {
-    setOpen(false);
-  };
+    const handleClick = () => {
+      setOpen(false);
+    };
 
-  return (
-    <>
-      <button
-        onClick={() => setOpen(!open)}
-        className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Open Toast
-      </button>
-      <Toast {...args} open={open} onClose={handleClose} onClick={handleClick} />
-    </>
-  );
-};
+    return (
+      <>
+        <button
+          onClick={() => setOpen(!open)}
+          className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Open Toast
+        </button>
+        <Toast
+          {...args}
+          open={open}
+          onClose={handleClose}
+          onClick={handleClick}
+        />
+      </>
+    );
+  },
 
-Default.args = {
-  open: false,
-  body: (
-    <p className="font-semibold">
-      Some simple <code>HTML</code> <em>message</em>
-    </p>
-  ),
-  horizontal: "center",
-  vertical: "middle",
-  rounded: "md",
-  toastBackground: "info",
-  autohide: true,
-  autohideDuration: 3000,
-  closeOnBlur: false,
-  dismissable: false,
+  args: {
+    open: false,
+    body: (
+      <p className="font-semibold">
+        Some simple <code>HTML</code> <em>message</em>
+      </p>
+    ),
+    horizontal: "center",
+    vertical: "middle",
+    rounded: "md",
+    toastBackground: "info",
+    autohide: true,
+    autohideDuration: 3000,
+    closeOnBlur: false,
+    dismissable: false,
+  },
 };

@@ -91,7 +91,8 @@ import { Counter } from '@smitch/breeze';
       },
     },
     layout: {
-      description: "Layout orientation (e.g., `col` for column, `row` for row).",
+      description:
+        "Layout orientation (e.g., `col` for column, `row` for row).",
       control: "text",
       defaultValue: "col",
       table: {

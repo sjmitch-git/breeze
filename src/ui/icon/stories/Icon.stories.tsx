@@ -79,7 +79,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: "This story demonstrates how to customize the Icon component using its props.",
+        story:
+          "This story demonstrates how to customize the Icon component using its props.",
       },
     },
   },
@@ -111,7 +112,8 @@ export const IconNameWithFill: Story = {
   parameters: {
     docs: {
       description: {
-        story: "This story demonstrates how to customize the Icon component using `iconStyle`.",
+        story:
+          "This story demonstrates how to customize the Icon component using `iconStyle`.",
       },
     },
   },
@@ -138,7 +140,8 @@ export const WithIconId: Story = {
   parameters: {
     docs: {
       description: {
-        story: "This story demonstrates how to use the `iconId` prop to fetch an icon from Icons8.",
+        story:
+          "This story demonstrates how to use the `iconId` prop to fetch an icon from Icons8.",
       },
     },
   },
@@ -169,7 +172,8 @@ export const WithEmoji: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Display emojis from [icons8](https://icons8.com/icon/set/emoji/emoji/).",
+        story:
+          "Display emojis from [icons8](https://icons8.com/icon/set/emoji/emoji/).",
       },
     },
   },
@@ -187,7 +191,8 @@ export const WithFlagEmoji: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Display flag emojis from [icons8](https://icons8.com/icon/set/emoji/emoji).",
+        story:
+          "Display flag emojis from [icons8](https://icons8.com/icon/set/emoji/emoji).",
       },
     },
   },

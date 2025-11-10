@@ -1,7 +1,14 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Form, Fieldset } from "..";
-import { TextInput, Autocomplete, SearchInput, Select, PasswordInput, Checkbox } from "../..";
+import {
+  TextInput,
+  Autocomplete,
+  SearchInput,
+  Select,
+  PasswordInput,
+  Checkbox,
+} from "../..";
 import { Default as Password } from "../../passwordinput/stories/PasswordInput.stories";
 import data from "../../../data/countries.json";
 
@@ -132,7 +139,14 @@ const onFormCancel = () => {
 const contactContent = () => {
   return (
     <Fieldset legendText="Contact" legendSize="xl" spacing="8">
-      <TextInput label="Name" autocomplete="name" layout="row" name="name" id="name" required />
+      <TextInput
+        label="Name"
+        autocomplete="name"
+        layout="row"
+        name="name"
+        id="name"
+        required
+      />
       <TextInput
         label="e-Mail"
         autocomplete="email"
@@ -266,7 +280,14 @@ const NewsletterContent = () => {
       spacing="4"
       className="flex-col md:flex-row flex-grow"
     >
-      <TextInput label="Name" autocomplete="name" layout="col" name="name" id="name" required />
+      <TextInput
+        label="Name"
+        autocomplete="name"
+        layout="col"
+        name="name"
+        id="name"
+        required
+      />
       <TextInput
         label="e-Mail"
         autocomplete="email"
@@ -298,7 +319,11 @@ const loginContent = () => {
         <p className="psw group-valid:hidden">
           Forgot <a href="#">password?</a>
         </p>
-        <Checkbox label="Remember me" name="remember" className="group-invalid:hidden" />
+        <Checkbox
+          label="Remember me"
+          name="remember"
+          className="group-invalid:hidden"
+        />
       </Fieldset>
     </>
   );
@@ -453,7 +478,8 @@ export const SearchForm: Story = {
   args: {
     children: searchContent(),
     actions: false,
-    className: "flex !flex-row !gap-0 border border-neutral focus-within:border-accent",
+    className:
+      "flex !flex-row !gap-0 border border-neutral focus-within:border-accent",
   },
 };
 

@@ -53,36 +53,38 @@ import { Pagination } from '@smitch/breeze';
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = (args: PaginationProps) => {
-  const [page, setPage] = useState("1");
+export const Default: Story = {
+  render: (args: PaginationProps) => {
+    const [page, setPage] = useState("1");
 
-  const handleChange = (page: string) => {
-    setPage(page);
-  };
+    const handleChange = (page: string) => {
+      setPage(page);
+    };
 
-  return <Pagination {...args} page={page} onChange={handleChange} />;
-};
+    return <Pagination {...args} page={page} onChange={handleChange} />;
+  },
 
-Default.args = {
-  layout: "horizontal",
-  rounded: true,
-  size: "lg",
-  gap: "md",
-  btnShape: "circle",
-  btnBackground: "info",
-  btnColor: "dark",
-  results: 69,
-  range: 6,
-  icons: true,
-  feedback: true,
-  feedbackLabel: "Page:",
-  minimal: false,
-};
+  args: {
+    layout: "horizontal",
+    rounded: true,
+    size: "lg",
+    gap: "md",
+    btnShape: "circle",
+    btnBackground: "info",
+    btnColor: "dark",
+    results: 69,
+    range: 6,
+    icons: true,
+    feedback: true,
+    feedbackLabel: "Page:",
+    minimal: false,
+  },
 
-Default.argTypes = {
-  onChange: {
-    table: {
-      disable: true,
+  argTypes: {
+    onChange: {
+      table: {
+        disable: true,
+      },
     },
   },
 };

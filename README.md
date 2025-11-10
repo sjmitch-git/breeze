@@ -13,9 +13,9 @@ Live demo: [https://breezeui.site](https://breezeui.site)
   - [Getting Started](#getting-started)
     - [1. Installation](#1-installation)
     - [2. Configure Tailwind 3](#2-configure-tailwind-3)
-    - [1. Generate Tailwind Config Files](#1-generate-tailwind-config-files)
-    - [2. Configure `tailwind.config.js`](#2-configure-tailwindconfigjs)
-    - [3. Add Tailwind Directives to CSS](#3-add-tailwind-directives-to-css)
+      - [1. Generate Tailwind Config Files](#1-generate-tailwind-config-files)
+      - [2. Configure `tailwind.config.js`](#2-configure-tailwindconfigjs)
+      - [3. Add Tailwind Directives to CSS](#3-add-tailwind-directives-to-css)
   - [Basic Usage](#basic-usage)
   - [Charts Usage](#charts-usage)
     - [Chart Usage Example](#chart-usage-example)
@@ -145,7 +145,6 @@ const config: Config = {
     require("@tailwindcss/forms")({
       strategy: "class",
     }),
-    require("@tailwindcss/typography"),
   ],
 };
 export default config;

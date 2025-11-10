@@ -76,11 +76,19 @@ export const Default: Story = {
   argTypes: {
     level: { control: { type: "select", options: [1, 2, 3, 4, 5, 6] } },
     weight: {
-      control: { type: "select", options: ["light", "normal", "medium", "semibold", "bold"] },
+      control: {
+        type: "select",
+        options: ["light", "normal", "medium", "semibold", "bold"],
+      },
     },
-    align: { control: { type: "select", options: ["left", "center", "right"] } },
+    align: {
+      control: { type: "select", options: ["left", "center", "right"] },
+    },
     transform: {
-      control: { type: "select", options: ["normal", "capitalize", "uppercase", "lowercase"] },
+      control: {
+        type: "select",
+        options: ["normal", "capitalize", "uppercase", "lowercase"],
+      },
     },
     children: { control: "text" },
     className: { control: "text" },

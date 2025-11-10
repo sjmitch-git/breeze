@@ -89,7 +89,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: "Displays a single post from the given X handle using the specified post ID.",
+        story:
+          "Displays a single post from the given X handle using the specified post ID.",
       },
     },
   },

@@ -42,7 +42,8 @@ import { PlaceHolder } from '@smitch/fluid'
       defaultValue: "288",
     },
     height: {
-      description: "Height of the placeholder (optional). Defaults to width if not provided.",
+      description:
+        "Height of the placeholder (optional). Defaults to width if not provided.",
       control: "text",
     },
     background: {

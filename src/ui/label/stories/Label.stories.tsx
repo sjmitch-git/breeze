@@ -77,13 +77,20 @@ export default meta;
 
 type Story = StoryObj<typeof Label>;
 
-const LabelComponent = (args: LabelProps) => <Label {...args}>{args.children}</Label>;
+const LabelComponent = (args: LabelProps) => (
+  <Label {...args}>{args.children}</Label>
+);
 
 export const Default: Story = {
   name: "Text Input",
   render: (args) => (
     <LabelComponent {...args}>
-      <Input size={args.size} type="text" placeholder="Placeholder Text" required={args.required} />
+      <Input
+        size={args.size}
+        type="text"
+        placeholder="Placeholder Text"
+        required={args.required}
+      />
     </LabelComponent>
   ),
   argTypes: {
@@ -262,32 +269,40 @@ const colorInputExample = `<Label label='Set Color' type='color' layout='row_rev
 	/>
 </Label>`;
 
-export const ColorInput: Story = (args: LabelProps) => {
-  const [value, setValue] = useState(args.value);
+export const ColorInput: Story = {
+  render: (args: LabelProps) => {
+    const [value, setValue] = useState(args.value);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValue(event.target.value);
+    };
 
-  return (
-    <Label {...args} label={`${args.label}: ${value}`}>
-      <Input type="color" name="color" size={args.size} value={value} onChange={handleChange} />
-    </Label>
-  );
-};
+    return (
+      <Label {...args} label={`${args.label}: ${value}`}>
+        <Input
+          type="color"
+          name="color"
+          size={args.size}
+          value={value}
+          onChange={handleChange}
+        />
+      </Label>
+    );
+  },
 
-ColorInput.args = {
-  type: "color",
-  layout: "row_reverse",
-  label: "Set Colour",
-  size: "md",
-  value: "#FF00FF",
-};
+  args: {
+    type: "color",
+    layout: "row_reverse",
+    label: "Set Colour",
+    size: "md",
+    value: "#FF00FF",
+  },
 
-ColorInput.parameters = {
-  docs: {
-    source: {
-      code: `${colorInputExample}`,
+  parameters: {
+    docs: {
+      source: {
+        code: `${colorInputExample}`,
+      },
     },
   },
 };
@@ -313,7 +328,11 @@ export const DatesAndTimeInput: Story = {
   },
   render: (args) => (
     <LabelComponent {...args}>
-      <Input size={args.size} type={args.type as TypeProps["type"]} name="date" />
+      <Input
+        size={args.size}
+        type={args.type as TypeProps["type"]}
+        name="date"
+      />
     </LabelComponent>
   ),
   argTypes: {
@@ -599,7 +618,12 @@ export const SelectDropdown: Story = {
   },
   render: (args) => (
     <LabelComponent {...args}>
-      <Select options={months} name="months" required={args.required} dropdownSize={args.size} />
+      <Select
+        options={months}
+        name="months"
+        required={args.required}
+        dropdownSize={args.size}
+      />
     </LabelComponent>
   ),
   argTypes: {

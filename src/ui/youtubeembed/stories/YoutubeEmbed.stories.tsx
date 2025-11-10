@@ -125,7 +125,8 @@ export const AutoplayMuteLoop: Story = {
       mute: 1,
       loop: 1,
     },
-    allow: "autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop",
+    allow:
+      "autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop",
     loading: "lazy",
   },
   parameters: {

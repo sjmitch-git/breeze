@@ -154,7 +154,9 @@ const profileContent = (handleCancel: () => void) => {
   return (
     <>
       <div id="tab1" data-title="Log-in">
-        <div className="p-4">{<Form {...LoginForm.args} onCancel={handleCancel} />}</div>
+        <div className="p-4">
+          {<Form {...LoginForm.args} onCancel={handleCancel} />}
+        </div>
       </div>
       <div id="tab2" data-title="Register">
         <div className="p-4">
@@ -176,15 +178,36 @@ const profileContent = (handleCancel: () => void) => {
 };
 
 const fruits = [
-  { name: "apples", emoji: "🍏", body: "<p>Some content about <strong>apples</strong></p>" },
-  { name: "bananas", emoji: "🍌", body: "<p>Some content about <strong>bananas</strong></p>" },
-  { name: "grapes", emoji: "🍇", body: "<p>Some content about <strong>grapes</strong></p>" },
-  { name: "lemons", emoji: "🍋", body: "<p>Some content about <strong>lemons</strong></p>" },
+  {
+    name: "apples",
+    emoji: "🍏",
+    body: "<p>Some content about <strong>apples</strong></p>",
+  },
+  {
+    name: "bananas",
+    emoji: "🍌",
+    body: "<p>Some content about <strong>bananas</strong></p>",
+  },
+  {
+    name: "grapes",
+    emoji: "🍇",
+    body: "<p>Some content about <strong>grapes</strong></p>",
+  },
+  {
+    name: "lemons",
+    emoji: "🍋",
+    body: "<p>Some content about <strong>lemons</strong></p>",
+  },
 ];
 
 const emojisContent = () => {
   return fruits.map((item, index) => (
-    <div id={`tab${index}`} key={`tab${index}`} data-title={item.emoji} className="p-4">
+    <div
+      id={`tab${index}`}
+      key={`tab${index}`}
+      data-title={item.emoji}
+      className="p-4"
+    >
       <h3 className="uppercase font-bold text-lg mb-2">{item.name}</h3>
       <div dangerouslySetInnerHTML={{ __html: item.body }} />
     </div>
@@ -193,7 +216,12 @@ const emojisContent = () => {
 
 const techContent = () => {
   return tech.map((item, index) => (
-    <div id={`tab${index}`} key={`tab${index}`} data-title={item.name} className="p-4">
+    <div
+      id={`tab${index}`}
+      key={`tab${index}`}
+      data-title={item.name}
+      className="p-4"
+    >
       <h3 className="uppercase font-bold text-lg mb-2">{item.name}</h3>
       <div dangerouslySetInnerHTML={{ __html: item.body }} />
     </div>
@@ -262,7 +290,11 @@ export const WithIcons: Story = {
     ...Default.args,
     children: techContent(),
     tabSize: "xl",
-    icons: [<ReactIcon key="react" />, <NextIcon key="next" />, <TailwindIcon key="tailwind" />],
+    icons: [
+      <ReactIcon key="react" />,
+      <NextIcon key="next" />,
+      <TailwindIcon key="tailwind" />,
+    ],
   },
 };
 

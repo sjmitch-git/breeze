@@ -57,69 +57,77 @@ import { Drawer } from '@smitch/breeze';
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = (args: DrawerProps) => {
-  const [open, setOpen] = useState(args.open);
+export const Default: Story = {
+  render: (args: DrawerProps) => {
+    const [open, setOpen] = useState(args.open);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
-  return (
-    <>
-      <button
-        onClick={() => setOpen(!open)}
-        className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Open Drawer
-      </button>
-      <Drawer {...args} open={open} onClose={handleClose}>
-        <div>
-          <p>
-            Some simple <strong className="text-accent">HTML</strong> content
-          </p>
-        </div>
-      </Drawer>
-    </>
-  );
+    return (
+      <>
+        <button
+          onClick={() => setOpen(!open)}
+          className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Open Drawer
+        </button>
+        <Drawer {...args} open={open} onClose={handleClose}>
+          <div>
+            <p>
+              Some simple <strong className="text-accent">HTML</strong> content
+            </p>
+          </div>
+        </Drawer>
+      </>
+    );
+  },
+
+  args: {
+    backdrop: true,
+    position: "bottom",
+    open: false,
+  },
 };
 
-export const WithForm: Story = (args: DrawerProps) => {
-  const [open, setOpen] = useState(args.open);
+export const WithForm: Story = {
+  render: (args: DrawerProps) => {
+    const [open, setOpen] = useState(args.open);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
-  const handleSubmit = (data: any) => {
-    console.log("form data", data);
-    handleClose();
-  };
+    const handleSubmit = (data: any) => {
+      console.log("form data", data);
+      handleClose();
+    };
 
-  return (
-    <>
-      <button
-        onClick={() => setOpen(!open)}
-        className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Open Drawer
-      </button>
-      <Drawer {...args} open={open} onClose={handleClose}>
-        <Form {...NewsletterForm.args} className="max-w-2xl pb-4 mx-auto" onsubmit={handleSubmit}>
-          {NewsletterForm.args?.children}
-        </Form>
-      </Drawer>
-    </>
-  );
-};
+    return (
+      <>
+        <button
+          onClick={() => setOpen(!open)}
+          className="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Open Drawer
+        </button>
+        <Drawer {...args} open={open} onClose={handleClose}>
+          <Form
+            {...NewsletterForm.args}
+            className="max-w-2xl pb-4 mx-auto"
+            onsubmit={handleSubmit}
+          >
+            {NewsletterForm.args?.children}
+          </Form>
+        </Drawer>
+      </>
+    );
+  },
 
-Default.args = {
-  backdrop: true,
-  position: "bottom",
-  open: false,
-};
-
-WithForm.args = {
-  backdrop: true,
-  position: "bottom",
-  open: false,
+  args: {
+    backdrop: true,
+    position: "bottom",
+    open: false,
+  },
 };

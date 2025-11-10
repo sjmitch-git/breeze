@@ -76,7 +76,13 @@ const htmlCopy = `<ul><li>- Dolor sit amet</li><li>- Aut ipsa voluptatem</li><li
 const buttons = () => {
   return (
     <div className="flex gap-4 justify-around items-center flex-grow">
-      <Button btnBackground="primary" layout="circle" size="xl" className="text-4xl" shadow="md">
+      <Button
+        btnBackground="primary"
+        layout="circle"
+        size="xl"
+        className="text-4xl"
+        shadow="md"
+      >
         CTA
       </Button>
     </div>
@@ -219,7 +225,8 @@ export const BackgroundVideo: Story = {
     body: "This story uses a looping video as a background",
     theme: "dark",
     titleLevel: 3,
-    bgVideo: "https://cdn.pixabay.com/video/2020/11/07/55859-504238916_small.mp4",
+    bgVideo:
+      "https://cdn.pixabay.com/video/2020/11/07/55859-504238916_small.mp4",
     bgVideoPoster: "/looping-poster.png",
     bgBlur: true,
     bgGrayscale: "sepia",

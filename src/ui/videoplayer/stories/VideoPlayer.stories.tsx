@@ -18,7 +18,14 @@ const meta: Meta = {
     aspect: {
       description: "The aspect ratio for the video player.",
       control: "select",
-      options: ["video", "square", "television", "cinema", "phone", "ultrawide"],
+      options: [
+        "video",
+        "square",
+        "television",
+        "cinema",
+        "phone",
+        "ultrawide",
+      ],
     },
     defaultError: {
       description: "Default error message when the video cannot be loaded.",
@@ -35,11 +42,13 @@ const meta: Meta = {
       control: "text",
     },
     poster: {
-      description: "URL for the image that appears before the video starts playing.",
+      description:
+        "URL for the image that appears before the video starts playing.",
       control: "text",
     },
     loop: {
-      description: "Boolean that sets whether the video should loop when it finishes.",
+      description:
+        "Boolean that sets whether the video should loop when it finishes.",
       control: "boolean",
     },
     muted: {

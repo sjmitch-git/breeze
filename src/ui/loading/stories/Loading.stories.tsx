@@ -14,7 +14,15 @@ const meta: Meta<typeof Loading> = {
   ],
   argTypes: {
     spinner: {
-      options: ["bars", "clock", "dots", "pulse", "spindots", "spinner", "wifi"],
+      options: [
+        "bars",
+        "clock",
+        "dots",
+        "pulse",
+        "spindots",
+        "spinner",
+        "wifi",
+      ],
       control: { type: "radio" },
     },
     layout: {
