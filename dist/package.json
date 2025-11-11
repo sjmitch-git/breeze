@@ -1,8 +1,10 @@
 {
   "name": "@smitch/breeze",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "A lightweight, Tailwind-powered React/Next.js UI component library.",
   "main": "lib/index.js",
+  "types": "index.d.ts",
+  "sideEffects": false,
   "keywords": [
     "react",
     "tailwindcss",
@@ -21,38 +23,21 @@
   ],
   "dependencies": {
     "@smitch/js-lib": "^0.3.22",
-    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.4.14",
+    "@tailwindcss/forms": "^0.5.9",
+    "react-icons": "^5.5.0",
+    "prismjs": "^1.30.0",
+    "tailwind-merge": "^2.5.4",
     "postcss": "^8.4.47",
-    "autoprefixer": "^10.4.20"
+    "autoprefixer": "^10.4.20",
+    "postcss-import": "^15.1.0"
   },
   "peerDependencies": {
     "react": ">=19",
     "react-dom": "^19.0.0",
-    "next": ">=15",
-    "tailwindcss": ">=3",
-    "react-icons": "^5.5.0",
-    "prismjs": "^1.30.0",
-    "tailwind-merge": "^2.5.4",
-    "@tailwindcss/forms": "^0.5.9"
-  },
-  "peerDependenciesMeta": {
-    "react-icons": {
-      "optional": false
-    },
-    "prismjs": {
-      "optional": false
-    },
-    "tailwind-merge": {
-      "optional": false
-    },
-    "@tailwindcss/forms": {
-      "optional": false
-    }
+    "next": ">=15"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.5"
-  },
-  "types": "index.d.ts",
-  "typings": "index.d.ts",
-  "sideEffects": false
+  }
 }
