@@ -128,15 +128,6 @@ const LazyMap = ({
   const mapRef = useRef<LeafletMap | null>(null);
   const tileOptions = [...defaultTileOptions, ...customTiles];
 
-  useEffect(() => {
-    return () => {
-      if (mapRef.current) {
-        mapRef.current.remove();
-        mapRef.current = null;
-      }
-    };
-  }, []);
-
   const zoomToFeature = (e: LeafletMouseEvent) => {
     const layer = e.target as Layer;
     if (mapRef.current) {

@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { LatLngExpression } from "leaflet";
 import L from "leaflet";
-import {
-  Map,
-  MapMarker,
-  MapCircle,
-  MapPolygon,
-  MapLine,
-  MapRectangle,
-} from "..";
+import { Map, MapMarker, MapCircle, MapPolygon, MapLine, MapRectangle } from "..";
 import { States } from "../../../data/states";
+
+const withMapCleanup = (Story: React.FC) => {
+  useEffect(() => {
+    return () => {
+      document.querySelectorAll(".leaflet-container").forEach((el) => {
+        const map = (el as any)._leaflet_map;
+        if (map?.remove) {
+          map.remove();
+        }
+        el.innerHTML = "";
+        delete (el as any)._leaflet_id;
+        delete (el as any)._leaflet_map;
+      });
+    };
+  }, []);
+
+  return <Story />;
+};
 
 const importInstructions = `
 ### How to import the map components
@@ -33,6 +44,7 @@ const meta: Meta<typeof Map> = {
   title: "Geo/Map",
   component: Map,
   decorators: [
+    withMapCleanup,
     (Story) => (
       <div className="max-w-sm mx-auto">
         <Story />
@@ -111,8 +123,7 @@ export default App;
     },
     fullscreenControl: {
       control: "boolean",
-      description:
-        "Enables the fullscreen control. Set to `true` or a `FullscreenOptions` object.",
+      description: "Enables the fullscreen control. Set to `true` or a `FullscreenOptions` object.",
       defaultValue: true,
     },
     fullscreenControlPosition: {
@@ -270,10 +281,7 @@ export const Rectangle: Story = {
   },
   render: (args) => (
     <Map {...args} bounds={rectangleBounds.pad(0.5)}>
-      <MapRectangle
-        bounds={rectangleBounds}
-        popupContent="Popup in rectangle"
-      />
+      <MapRectangle bounds={rectangleBounds} popupContent="Popup in rectangle" />
     </Map>
   ),
 };
@@ -329,7 +337,7 @@ export const CustomMarkers: Story = {
   },
   render: (args) => {
     const bounds = L.latLngBounds(
-      airports.map((airport) => [airport.latlon[0], airport.latlon[1]]),
+      airports.map((airport) => [airport.latlon[0], airport.latlon[1]])
     );
 
     return (
@@ -440,9 +448,7 @@ export const BubbleMarkers: Story = {
     style: { height: "400px", width: "100%" },
   },
   render: (args) => {
-    const bounds = L.latLngBounds(
-      cities.map((city) => [city.latlon[0], city.latlon[1]]),
-    );
+    const bounds = L.latLngBounds(cities.map((city) => [city.latlon[0], city.latlon[1]]));
 
     return (
       <Map {...args} bounds={bounds} onDblClick={handleDblClick}>
@@ -466,18 +472,18 @@ function getColor(d: number) {
   return d > 1000
     ? "#800026"
     : d > 500
-      ? "#BD0026"
-      : d > 200
-        ? "#E31A1C"
-        : d > 100
-          ? "#FC4E2A"
-          : d > 50
-            ? "#FD8D3C"
-            : d > 20
-              ? "#FEB24C"
-              : d > 10
-                ? "#FED976"
-                : "#FFEDA0";
+    ? "#BD0026"
+    : d > 200
+    ? "#E31A1C"
+    : d > 100
+    ? "#FC4E2A"
+    : d > 50
+    ? "#FD8D3C"
+    : d > 20
+    ? "#FEB24C"
+    : d > 10
+    ? "#FED976"
+    : "#FFEDA0";
 }
 
 const addFillColorToGeoJSON = (geojson: any) => {
