@@ -38,20 +38,6 @@ const RadioGroup = ({
 }: RadioGroupProps) => {
   const [checked, setChecked] = useState("");
 
-  /*  useEffect(() => {
-    if (defaultChecked !== undefined) {
-      setChecked(defaultChecked);
-    }
-  }, [defaultChecked]); */
-
-  /* const [checked, setChecked] = useState<string>(() => {
-    if (defaultChecked != null) {
-      const found = data.some((item) => item.id === defaultChecked);
-      return found ? defaultChecked : "";
-    }
-    return "";
-  }); */
-
   const layoutStyles = useMemo(() => layouts[columns], [columns]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
