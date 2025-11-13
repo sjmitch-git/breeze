@@ -1,14 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Form, Fieldset } from "..";
-import {
-  TextInput,
-  Autocomplete,
-  SearchInput,
-  Select,
-  PasswordInput,
-  Checkbox,
-} from "../..";
+import { TextInput, Autocomplete, SearchInput, Select, PasswordInput, Checkbox } from "../..";
 import { Default as Password } from "../../passwordinput/stories/PasswordInput.stories";
 import data from "../../../data/countries.json";
 
@@ -45,7 +38,7 @@ const meta: Meta<typeof Form> = {
         disable: true,
       },
     },
-    onsubmit: {
+    onFormSubmit: {
       table: {
         disable: true,
       },
@@ -102,7 +95,7 @@ import { Form } from '@smitch/fluid'
 ### Usage Example:
 \`\`\`tsx
 <Form
-  onsubmit={handleSubmit}
+  onFormSubmit={handleSubmit}
   actions={true}
   showCancel={true}
   submitLabel="Submit"
@@ -139,14 +132,7 @@ const onFormCancel = () => {
 const contactContent = () => {
   return (
     <Fieldset legendText="Contact" legendSize="xl" spacing="8">
-      <TextInput
-        label="Name"
-        autocomplete="name"
-        layout="row"
-        name="name"
-        id="name"
-        required
-      />
+      <TextInput label="Name" autocomplete="name" layout="row" name="name" id="name" required />
       <TextInput
         label="e-Mail"
         autocomplete="email"
@@ -180,7 +166,7 @@ export const ContactForm: Story = {
     actionsLayout: "row",
     actionsSpacing: "0",
     onCancel: onFormCancel,
-    onsubmit: handleSubmit,
+    onFormSubmit: handleSubmit,
     showCancel: true,
     submitBackground: "primary",
     cancelBackground: "transparent",
@@ -280,14 +266,7 @@ const NewsletterContent = () => {
       spacing="4"
       className="flex-col md:flex-row flex-grow"
     >
-      <TextInput
-        label="Name"
-        autocomplete="name"
-        layout="col"
-        name="name"
-        id="name"
-        required
-      />
+      <TextInput label="Name" autocomplete="name" layout="col" name="name" id="name" required />
       <TextInput
         label="e-Mail"
         autocomplete="email"
@@ -319,11 +298,7 @@ const loginContent = () => {
         <p className="psw group-valid:hidden">
           Forgot <a href="#">password?</a>
         </p>
-        <Checkbox
-          label="Remember me"
-          name="remember"
-          className="group-invalid:hidden"
-        />
+        <Checkbox label="Remember me" name="remember" className="group-invalid:hidden" />
       </Fieldset>
     </>
   );
@@ -335,7 +310,7 @@ export const LoginForm: Story = {
     actionsLayout: "row",
     actionsSpacing: "0",
     onCancel: onFormCancel,
-    onsubmit: handleSubmit,
+    onFormSubmit: handleSubmit,
     showCancel: true,
     submitLabel: "Log-in",
     submitBackground: "primary",
@@ -348,7 +323,7 @@ export const LoginForm: Story = {
 
 export const AddressForm: Story = {
   args: {
-    onsubmit: handleSubmit,
+    onFormSubmit: handleSubmit,
     children: AddressContent(),
     actionsLayout: "row",
     actionsSpacing: "0",
@@ -360,7 +335,7 @@ export const AddressForm: Story = {
 
 export const NewsletterForm: Story = {
   args: {
-    onsubmit: handleSubmit,
+    onFormSubmit: handleSubmit,
     children: NewsletterContent(),
     layout: "row",
     actionsLayout: "row",
@@ -478,8 +453,7 @@ export const SearchForm: Story = {
   args: {
     children: searchContent(),
     actions: false,
-    className:
-      "flex !flex-row !gap-0 border border-neutral focus-within:border-accent",
+    className: "flex !flex-row !gap-0 border border-neutral focus-within:border-accent",
   },
 };
 
