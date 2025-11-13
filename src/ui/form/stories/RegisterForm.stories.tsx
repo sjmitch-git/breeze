@@ -51,7 +51,7 @@ import { RegisterForm } from '@smitch/fluid'
     },
   },
   argTypes: {
-    onsubmit: {
+    onFormSubmit: {
       table: {
         disable: true,
       },
@@ -84,7 +84,7 @@ import { RegisterForm } from '@smitch/fluid'
   },
   args: {
     // form
-    onsubmit: handleSubmit,
+    onFormSubmit: handleSubmit,
     onCancel: handleCancel,
 
     // fieldset
@@ -169,7 +169,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     // form
-    onsubmit: handleSubmit,
+    onFormSubmit: handleSubmit,
     onCancel: handleCancel,
 
     // fieldset
