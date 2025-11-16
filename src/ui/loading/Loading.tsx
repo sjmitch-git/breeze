@@ -1,4 +1,4 @@
-import React, { Suspense, useMemo } from "react";
+import React, { Suspense, useMemo, useEffect } from "react";
 
 import { twMerge } from "tailwind-merge";
 
@@ -64,7 +64,7 @@ const getSpinnerComponent = (spinner: string) => {
 
 import { LoadingProps } from "./types";
 
-const modalClasses = 'absolute inset-0 bg-black/50'
+const modalClasses = "absolute inset-0 bg-black/50";
 
 const Loading = ({
   className = "",
@@ -75,7 +75,7 @@ const Loading = ({
   size = "md",
   loadingColor = "current",
   layout = "col",
-  modal = false
+  modal = false,
 }: LoadingProps) => {
   const SpinnerIcon = useMemo(() => getSpinnerComponent(spinner), [spinner]);
   const width = useMemo(() => sizeToWidth[size], [size]);
@@ -83,10 +83,30 @@ const Loading = ({
   const layoutClasses = useMemo(() => layouts[layout], [layout]);
   const animateClasses = useMemo(() => animates[customAnimate], [customAnimate]);
 
-  return (
+  useEffect(() => {
+    if (!modal) return;
+
+    const originalOverflow = document.body.style.overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    window.scrollTo(0, 0);
+
+    return () => {
+      document.body.style.overflow = originalOverflow || "";
+      document.body.style.paddingRight = originalPaddingRight || "";
+    };
+  }, [modal]);
+
+  const loadingContent = (
     <div
       className={twMerge(
-        `loading flex justify-center items-center text-dark dark:text-light ${modal && modalClasses}`,
+        `loading flex justify-center items-center text-dark dark:text-light`,
         className
       )}
     >
@@ -117,6 +137,16 @@ const Loading = ({
       </figure>
     </div>
   );
+
+  if (modal) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-xl">{loadingContent}</div>
+      </div>
+    );
+  }
+
+  return loadingContent;
 };
 
 export default Loading;
