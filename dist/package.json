@@ -1,6 +1,6 @@
 {
   "name": "@smitch/breeze",
-  "version": "2.2.16",
+  "version": "2.2.17",
   "description": "A lightweight, Tailwind-powered React/Next.js UI component library.",
   "main": "lib/index.js",
   "types": "index.d.ts",

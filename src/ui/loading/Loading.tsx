@@ -64,6 +64,8 @@ const getSpinnerComponent = (spinner: string) => {
 
 import { LoadingProps } from "./types";
 
+const modalClasses = 'absolute inset-0 bg-black/50'
+
 const Loading = ({
   className = "",
   caption = "",
@@ -73,6 +75,7 @@ const Loading = ({
   size = "md",
   loadingColor = "current",
   layout = "col",
+  modal = false
 }: LoadingProps) => {
   const SpinnerIcon = useMemo(() => getSpinnerComponent(spinner), [spinner]);
   const width = useMemo(() => sizeToWidth[size], [size]);
@@ -83,7 +86,7 @@ const Loading = ({
   return (
     <div
       className={twMerge(
-        `loading flex justify-center items-center text-dark dark:text-light`,
+        `loading flex justify-center items-center text-dark dark:text-light ${modal && modalClasses}`,
         className
       )}
     >

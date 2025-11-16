@@ -75,6 +75,7 @@ export const Default: Story = {
     size: "md",
     loadingColor: "warning",
     layout: "col",
+    modal: false
   },
   argTypes: {
     customSpinner: {
