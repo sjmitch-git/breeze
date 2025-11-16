@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Suspense, useMemo, useEffect } from "react";
 
 import { twMerge } from "tailwind-merge";
