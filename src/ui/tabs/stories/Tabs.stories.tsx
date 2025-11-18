@@ -95,7 +95,7 @@ The **Tabs** component organizes content into multiple panels, providing an inte
 
 ### Import:
 \`\`\`jsx
-import { Tabs } from '@smitch/fluid-ui'
+import { Tabs } from '@smitch/from '@smitch/breeze';'
 \`\`\`
 
 ### Example Usage:
@@ -154,9 +154,7 @@ const profileContent = (handleCancel: () => void) => {
   return (
     <>
       <div id="tab1" data-title="Log-in">
-        <div className="p-4">
-          {<Form {...LoginForm.args} onCancel={handleCancel} />}
-        </div>
+        <div className="p-4">{<Form {...LoginForm.args} onCancel={handleCancel} />}</div>
       </div>
       <div id="tab2" data-title="Register">
         <div className="p-4">
@@ -202,12 +200,7 @@ const fruits = [
 
 const emojisContent = () => {
   return fruits.map((item, index) => (
-    <div
-      id={`tab${index}`}
-      key={`tab${index}`}
-      data-title={item.emoji}
-      className="p-4"
-    >
+    <div id={`tab${index}`} key={`tab${index}`} data-title={item.emoji} className="p-4">
       <h3 className="uppercase font-bold text-lg mb-2">{item.name}</h3>
       <div dangerouslySetInnerHTML={{ __html: item.body }} />
     </div>
@@ -216,12 +209,7 @@ const emojisContent = () => {
 
 const techContent = () => {
   return tech.map((item, index) => (
-    <div
-      id={`tab${index}`}
-      key={`tab${index}`}
-      data-title={item.name}
-      className="p-4"
-    >
+    <div id={`tab${index}`} key={`tab${index}`} data-title={item.name} className="p-4">
       <h3 className="uppercase font-bold text-lg mb-2">{item.name}</h3>
       <div dangerouslySetInnerHTML={{ __html: item.body }} />
     </div>
@@ -290,11 +278,7 @@ export const WithIcons: Story = {
     ...Default.args,
     children: techContent(),
     tabSize: "xl",
-    icons: [
-      <ReactIcon key="react" />,
-      <NextIcon key="next" />,
-      <TailwindIcon key="tailwind" />,
-    ],
+    icons: [<ReactIcon key="react" />, <NextIcon key="next" />, <TailwindIcon key="tailwind" />],
   },
 };
 

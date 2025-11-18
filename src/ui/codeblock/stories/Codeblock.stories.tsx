@@ -51,7 +51,7 @@ You can switch between themes for light and dark modes based on your UI requirem
 
 ### Import:
 \`\`\`tsx
-import { Codeblock } from '@smitch/fluid'
+import { Codeblock } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

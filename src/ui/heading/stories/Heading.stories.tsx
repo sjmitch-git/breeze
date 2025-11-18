@@ -45,7 +45,7 @@ const meta = {
 
 ### Import:
 \`\`\`tsx
-import { Heading } from '@smitch/fluid'
+import { Heading } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

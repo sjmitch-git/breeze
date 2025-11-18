@@ -30,7 +30,7 @@ The **Badge** component is used to display small labels or notifications on othe
 
 ### Import
 \`\`\`tsx
-import { Badge } from '@smitch/fluid'
+import { Badge } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:

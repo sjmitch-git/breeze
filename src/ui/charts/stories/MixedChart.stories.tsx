@@ -18,7 +18,7 @@ The **MixedChart** component is ideal for displaying two or more different chart
 
 ### Import:
 \`\`\`jsx
-import { MixedChart } from '@smitch/fluid/charts';
+import { MixedChart } from '@smitch/breeze/charts';
 \`\`\`
 
 ### Example Usage:
@@ -99,16 +99,7 @@ export const Default: Story = {
           backgroundColor: "#cccccc",
         },
       ],
-      labels: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-      ],
+      labels: ["January", "February", "March", "April", "May", "June", "July", "August"],
     },
     title: "Monthly Sales Data (GBP)",
     titleColor: "#a7a7a7",

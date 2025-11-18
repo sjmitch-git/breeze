@@ -26,7 +26,7 @@ The **Fieldset** component is used to group related form elements together, impr
 
 ### Import:
 \`\`\`tsx
-import { Fieldset } from '@smitch/fluid'
+import { Fieldset } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

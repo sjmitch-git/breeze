@@ -16,7 +16,7 @@ const meta: Meta = {
     nextjs: {
       appDirectory: true,
       navigation: {
-        pathname: "/fluid/components/breadcrumbs",
+        pathname: "/breeze/components/breadcrumbs",
       },
     },
     docs: {

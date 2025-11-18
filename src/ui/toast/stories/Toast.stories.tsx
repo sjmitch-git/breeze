@@ -21,7 +21,7 @@ The **Toast** component provides feedback messages that are typically used for t
 
 ### Import:
 \`\`\`tsx
-import { Toast } from '@smitch/fluid'
+import { Toast } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:
@@ -90,12 +90,7 @@ export const Default: Story = {
         >
           Open Toast
         </button>
-        <Toast
-          {...args}
-          open={open}
-          onClose={handleClose}
-          onClick={handleClick}
-        />
+        <Toast {...args} open={open} onClose={handleClose} onClick={handleClick} />
       </>
     );
   },

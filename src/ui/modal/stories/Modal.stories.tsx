@@ -31,7 +31,7 @@ The **Modal** component is a flexible UI element that displays an image in a pop
 
 ### Import:
 \`\`\`jsx
-import { Modal } from '@smitch/fluid'
+import { Modal } from '@smitch/breeze'
 ick={() => setOpen(false)}
 />
 \`\`\`

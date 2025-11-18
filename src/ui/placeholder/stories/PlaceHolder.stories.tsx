@@ -17,7 +17,7 @@ It uses the [PlaceHold.co](https://placehold.co) service for generating placehol
 
 ### Import
 \`\`\`tsx
-import { PlaceHolder } from '@smitch/fluid'
+import { PlaceHolder } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:
@@ -42,8 +42,7 @@ import { PlaceHolder } from '@smitch/fluid'
       defaultValue: "288",
     },
     height: {
-      description:
-        "Height of the placeholder (optional). Defaults to width if not provided.",
+      description: "Height of the placeholder (optional). Defaults to width if not provided.",
       control: "text",
     },
     background: {

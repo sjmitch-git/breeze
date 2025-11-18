@@ -78,7 +78,7 @@ The **Button** component provides a customizable button for various use cases. I
 
 ### Import:
 \`\`\`tsx
-import { Button } from '@smitch/fluid'
+import { Button } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

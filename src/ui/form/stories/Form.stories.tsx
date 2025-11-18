@@ -89,7 +89,7 @@ The **Form** component is used to create structured, flexible forms that allow u
 
 ### Import:
 \`\`\`tsx
-import { Form } from '@smitch/fluid'
+import { Form } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

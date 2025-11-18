@@ -26,7 +26,7 @@ The **XEmbed** component allows users to embed a single post from X into their U
 
 ### Import:
 \`\`\`jsx
-import { TwitterEmbed } from '@smitch/fluid';
+import { TwitterEmbed } from '@smitch/breeze';
 \`\`\`
 
 ### Example Usage:
@@ -89,8 +89,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          "Displays a single post from the given X handle using the specified post ID.",
+        story: "Displays a single post from the given X handle using the specified post ID.",
       },
     },
   },

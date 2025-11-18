@@ -53,7 +53,7 @@ The **Label** component wraps form elements like inputs, providing a label and l
 
 ### Import
 \`\`\`tsx
-import { Label } from '@smitch/fluid'
+import { Label } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:
@@ -77,20 +77,13 @@ export default meta;
 
 type Story = StoryObj<typeof Label>;
 
-const LabelComponent = (args: LabelProps) => (
-  <Label {...args}>{args.children}</Label>
-);
+const LabelComponent = (args: LabelProps) => <Label {...args}>{args.children}</Label>;
 
 export const Default: Story = {
   name: "Text Input",
   render: (args) => (
     <LabelComponent {...args}>
-      <Input
-        size={args.size}
-        type="text"
-        placeholder="Placeholder Text"
-        required={args.required}
-      />
+      <Input size={args.size} type="text" placeholder="Placeholder Text" required={args.required} />
     </LabelComponent>
   ),
   argTypes: {
@@ -279,13 +272,7 @@ export const ColorInput: Story = {
 
     return (
       <Label {...args} label={`${args.label}: ${value}`}>
-        <Input
-          type="color"
-          name="color"
-          size={args.size}
-          value={value}
-          onChange={handleChange}
-        />
+        <Input type="color" name="color" size={args.size} value={value} onChange={handleChange} />
       </Label>
     );
   },
@@ -328,11 +315,7 @@ export const DatesAndTimeInput: Story = {
   },
   render: (args) => (
     <LabelComponent {...args}>
-      <Input
-        size={args.size}
-        type={args.type as TypeProps["type"]}
-        name="date"
-      />
+      <Input size={args.size} type={args.type as TypeProps["type"]} name="date" />
     </LabelComponent>
   ),
   argTypes: {
@@ -618,12 +601,7 @@ export const SelectDropdown: Story = {
   },
   render: (args) => (
     <LabelComponent {...args}>
-      <Select
-        options={months}
-        name="months"
-        required={args.required}
-        dropdownSize={args.size}
-      />
+      <Select options={months} name="months" required={args.required} dropdownSize={args.size} />
     </LabelComponent>
   ),
   argTypes: {

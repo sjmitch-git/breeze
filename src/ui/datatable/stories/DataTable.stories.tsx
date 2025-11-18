@@ -25,7 +25,7 @@ The **DataTable** component displays structured data in a table format, supporti
 
 ### Import:
 \`\`\`jsx
-import { DataTable } from '@smitch/fluid-ui'
+import { DataTable } from '@smitch/breeze'
 \`\`\`
 
 ### Import Data:

@@ -90,7 +90,7 @@ The **Dialog** component displays a modal or non-modal dialog box with customiza
 
 ### Import
 \`\`\`tsx
-import { Dialog } from '@smitch/fluid'
+import { Dialog } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:
@@ -203,13 +203,7 @@ const ModalDialogComponent = (args: DialogProps) => {
         >
           <div id="tab1" data-title="Log-in">
             <div className="py-4">
-              {
-                <Form
-                  {...LoginForm.args}
-                  onCancel={handleClose}
-                  onsubmit={handleSubmit}
-                />
-              }
+              {<Form {...LoginForm.args} onCancel={handleClose} onFormSubmit={handleSubmit} />}
             </div>
           </div>
           <div id="tab2" data-title="Register">
@@ -223,7 +217,7 @@ const ModalDialogComponent = (args: DialogProps) => {
                   confirmLabel="Confirm"
                   checkLabel="Terms & Conditions"
                   onCancel={handleClose}
-                  onsubmit={handleSubmit}
+                  onFormSubmit={handleSubmit}
                 />
               }
             </div>

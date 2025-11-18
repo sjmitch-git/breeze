@@ -41,12 +41,12 @@ The **Progress** component represents a progress bar, which can be used to indic
 ### Import
 \`\`\`tsx
 // simple progress
-import { Progress } from '@smitch/fluid'
+import { Progress } from '@smitch/breeze'
 \`\`\`
 
 \`\`\`tsx
 // modal progress
-import { Progress, Dialog } from '@smitch/fluid'
+import { Progress, Dialog } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:
@@ -94,10 +94,7 @@ export default meta;
 
 type Story = StoryObj<typeof Progress>;
 
-const ProgressComponent = (args: {
-  totalSize: number;
-  onDone?: () => void;
-}) => {
+const ProgressComponent = (args: { totalSize: number; onDone?: () => void }) => {
   const [downloadedSize, setDownloadedSize] = useState(0);
   const [isCancelled, setIsCancelled] = useState(false);
 
@@ -124,9 +121,7 @@ const ProgressComponent = (args: {
     return () => clearInterval(interval);
   }, [args.totalSize, isCancelled]);
 
-  return (
-    <Progress {...args} downloadedSize={downloadedSize} onDone={handleDone} />
-  );
+  return <Progress {...args} downloadedSize={downloadedSize} onDone={handleDone} />;
 };
 
 export const SimpleProgress: Story = {
@@ -209,11 +204,7 @@ const ModalProgressComponent = (args: {
           onClose={handleClose}
         >
           <div className="pb-4 px-4">
-            <Progress
-              {...args}
-              downloadedSize={downloadedSize}
-              onDone={handleOnDone}
-            />
+            <Progress {...args} downloadedSize={downloadedSize} onDone={handleOnDone} />
           </div>
         </Dialog>
       )}

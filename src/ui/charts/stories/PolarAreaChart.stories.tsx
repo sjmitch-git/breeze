@@ -19,7 +19,7 @@ The **PolarAreaChart** component displays data in a circular format, where each 
 
 ### Import:
 \`\`\`jsx
-import { PolarAreaChart } from '@smitch/fluid/charts'
+import { PolarAreaChart } from '@smitch/breeze/charts'
 \`\`\`
 
 ### Example Usage:

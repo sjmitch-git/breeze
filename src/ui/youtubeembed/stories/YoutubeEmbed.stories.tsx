@@ -19,7 +19,7 @@ The **YouTube Embed** component allows users to embed YouTube videos seamlessly 
 
 ### Import:
 \`\`\`jsx
-import { YoutubeEmbed } from '@smitch/fluid'
+import { YoutubeEmbed } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:
@@ -125,8 +125,7 @@ export const AutoplayMuteLoop: Story = {
       mute: 1,
       loop: 1,
     },
-    allow:
-      "autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop",
+    allow: "autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop",
     loading: "lazy",
   },
   parameters: {

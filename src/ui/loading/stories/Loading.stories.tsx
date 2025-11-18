@@ -14,15 +14,7 @@ const meta: Meta<typeof Loading> = {
   ],
   argTypes: {
     spinner: {
-      options: [
-        "bars",
-        "clock",
-        "dots",
-        "pulse",
-        "spindots",
-        "spinner",
-        "wifi",
-      ],
+      options: ["bars", "clock", "dots", "pulse", "spindots", "spinner", "wifi"],
       control: { type: "radio" },
     },
     layout: {
@@ -44,7 +36,7 @@ The **Loading** component indicates background processes using various spinner a
 
 ### Import
 \`\`\`tsx
-import { Loading } from '@smitch/fluid'
+import { Loading } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:
@@ -75,7 +67,7 @@ export const Default: Story = {
     size: "md",
     loadingColor: "warning",
     layout: "col",
-    modal: false
+    modal: false,
   },
   argTypes: {
     customSpinner: {

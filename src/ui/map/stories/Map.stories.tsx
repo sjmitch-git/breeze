@@ -36,7 +36,7 @@ import {
   MapPolygon,
   MapLine,
   MapRectangle,
-} from "@smitch/fluid/map";
+} from "@smitch/breeze/map";
 \`\`\`
 `;
 
@@ -68,7 +68,7 @@ ${importInstructions}
 
 ### Example Usage
 \`\`\`jsx
-import { Map } from "@smitch/fluid/map";
+import { Map } from "@smitch/breeze/map";
 
 const App = () => {
   return (

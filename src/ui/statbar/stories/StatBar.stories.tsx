@@ -12,8 +12,7 @@ const meta: Meta<typeof StatBar> = {
     },
     data: {
       control: "object",
-      description:
-        "Two numbers representing the absolute values for each team.",
+      description: "Two numbers representing the absolute values for each team.",
       defaultValue: [60, 40],
     },
     colors: {
@@ -31,7 +30,7 @@ The bar dynamically adjusts to represent the data proportions as percentages.
 
 ### Import:
 \`\`\`tsx
-import { StatBar } from '@smitch/fluid'
+import { StatBar } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage

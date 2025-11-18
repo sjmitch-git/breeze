@@ -38,7 +38,7 @@ The \`Alert\` component is used to display important messages to the user. It su
 
 ### Import
 \`\`\`tsx
-import { Alert } from '@smitch/fluid'
+import { Alert } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

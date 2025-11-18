@@ -34,7 +34,7 @@ The **RegisterForm** component is a customizable form for user registration, inc
 
 ### Import:
 \`\`\`tsx
-import { RegisterForm } from '@smitch/fluid'
+import { RegisterForm } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

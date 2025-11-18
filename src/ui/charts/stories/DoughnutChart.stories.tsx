@@ -18,7 +18,7 @@ The **DoughnutChart** component is a circular chart divided into slices to illus
 
 ### Import:
 \`\`\`jsx
-import { DoughnutChart } from '@smitch/fluid/charts'
+import { DoughnutChart } from '@smitch/breeze/charts'
 \`\`\`
 
 ### Example Usage:

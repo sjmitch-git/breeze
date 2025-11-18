@@ -24,7 +24,7 @@ const meta = {
 
 ### Import:
 \`\`\`tsx
-import { Blockquote } from '@smitch/fluid'
+import { Blockquote } from '@smitch/breeze'
 \`\`\`
 
 ### Usage Example:

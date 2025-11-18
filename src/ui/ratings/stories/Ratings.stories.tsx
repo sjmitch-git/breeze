@@ -52,7 +52,7 @@ The **Ratings** component allows users to display a set of icons (such as stars)
 
 ### Import
 \`\`\`tsx
-import { Ratings } from '@smitch/fluid'
+import { Ratings } from '@smitch/breeze'
 \`\`\`
 
 ### Example Usage:
@@ -169,8 +169,7 @@ export const EmojiCustomIcon: Story = {
         code: emojiIconExample,
       },
       description: {
-        story:
-          "This story demonstrates a custom emoji icon 🙂 used for the Ratings component.",
+        story: "This story demonstrates a custom emoji icon 🙂 used for the Ratings component.",
       },
     },
   },
