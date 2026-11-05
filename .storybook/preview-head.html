@@ -8,7 +8,6 @@
 </style>
 
 <script>
-  // Fallback so components don't crash when window.gtag is missing in Storybook
   window.gtag = window.gtag || function() {
     console.log('[Storybook Mock] gtag:', arguments);
   };

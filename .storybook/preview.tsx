@@ -31,9 +31,11 @@ const preview: Preview = {
     }),
     (Story, context) => {
       useEffect(() => {
-        window.gtag("config", "G-JKVR4XLTMW", {
-          page_path: window.location.pathname + window.location.search,
-        });
+        if (typeof window.gtag === "function") {
+          window.gtag("config", "G-JKVR4XLTMW", {
+            page_path: window.location.pathname + window.location.search,
+          });
+        }
       }, [context.id]);
       return (
         <div className="preview-decorator bg-slate-50 dark:bg-slate-700 dark:text-light md:p-4">
